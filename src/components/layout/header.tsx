@@ -77,14 +77,13 @@ export default function Header() {
               </a>
             </Button>
           ))}
-           <Link href={socialLinks.resume} target="_blank" rel="noopener noreferrer" className="ml-4">
-              <Button variant="outline" size="sm" className="border-accent/50 hover:bg-accent hover:text-accent-foreground hover:glow-sm">
-                <FileText className="w-4 h-4 mr-2" />
-                Resume
+        </nav>
+        <div className="flex items-center gap-2 md:hidden">
+            <Link href={socialLinks.resume} target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="icon" className="border-accent/50">
+                <FileText className="w-4 h-4" />
               </Button>
             </Link>
-        </nav>
-        <div className="md:hidden">
           <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X /> : <Menu />}
           </Button>
@@ -98,12 +97,6 @@ export default function Header() {
                 <a href={link.hash} onClick={(e) => { e.preventDefault(); handleLinkClick(link.hash); }}>{link.name}</a>
               </Button>
             ))}
-             <Link href={socialLinks.resume} target="_blank" rel="noopener noreferrer" className="w-full mt-2">
-              <Button variant="outline" className="w-full border-accent/50">
-                <FileText className="w-4 h-4 mr-2" />
-                Resume
-              </Button>
-            </Link>
           </nav>
         </div>
       )}
