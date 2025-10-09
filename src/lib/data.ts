@@ -1,5 +1,5 @@
 
-import { GraduationCap, Briefcase, Rocket, BrainCircuit, type LucideIcon, Code, Server, Cloud, GitBranch, Terminal } from "lucide-react";
+import { GraduationCap, Briefcase, Rocket, BrainCircuit, type LucideIcon, Code, Server, Cloud, GitBranch, Terminal, Award } from "lucide-react";
 
 export const navLinks = [
   { name: "Home", hash: "#home" },
@@ -7,6 +7,7 @@ export const navLinks = [
   { name: "Experience", hash: "#experience" },
   { name: "Projects", hash: "#projects" },
   { name: "Skills", hash: "#skills" },
+  { name: "Certifications", hash: "#certifications" },
   { name: "Stats", hash: "#stats" },
   { name: "Contact", hash: "#contact" },
 ];
@@ -127,20 +128,20 @@ export const projectsData = [
             outcomes: "A functional MVP that connects learners and builders, fostering a community of collaborative development and continuous learning."
         }
     },
-    {
-      title: "smart_weather_dash",
-      tagline: "A smart weather dashboard with real-time data and forecasts.",
-      tech: ["JavaScript", "HTML/CSS", "Weather API"],
-      links: {
-          github: "https://github.com/Iankitsinghak/smart_weather_dash",
-          live: ""
-      },
-      featured: false,
-      details: {
-          description: "A clean and modern weather dashboard that provides current weather conditions, multi-day forecasts, and other meteorological data by integrating with a third-party weather API.",
-          challenges: "Handling asynchronous API calls gracefully and presenting the data in a visually appealing and easy-to-understand format.",
-          outcomes: "A responsive and practical weather application that demonstrates proficiency in working with external APIs and frontend data visualization."
-      }
+  {
+    title: "smart_weather_dash",
+    tagline: "A smart weather dashboard with real-time data and forecasts.",
+    tech: ["JavaScript", "HTML/CSS", "Weather API"],
+    links: {
+        github: "https://github.com/Iankitsinghak/smart_weather_dash",
+        live: ""
+    },
+    featured: false,
+    details: {
+        description: "A clean and modern weather dashboard that provides current weather conditions, multi-day forecasts, and other meteorological data by integrating with a third-party weather API.",
+        challenges: "Handling asynchronous API calls gracefully and presenting the data in a visually appealing and easy-to-understand format.",
+        outcomes: "A responsive and practical weather application that demonstrates proficiency in working with external APIs and frontend data visualization."
+    }
   },
   {
     title: "OpenSauce Contribution",
@@ -156,8 +157,8 @@ export const projectsData = [
         challenges: "Adhering to the project's coding standards and contribution guidelines, and ensuring the correctness and efficiency of the submitted code.",
         outcomes: "Successfully merged contributions into the main branch, demonstrating the ability to collaborate on open-source projects and a strong understanding of fundamental computer science concepts."
     }
-},
-{
+  },
+  {
     title: "food-troops",
     tagline: "A web application for food discovery and ordering.",
     tech: ["JavaScript", "HTML/CSS"],
@@ -171,38 +172,38 @@ export const projectsData = [
         challenges: "Creating a responsive and engaging user interface for browsing a large variety of food options.",
         outcomes: "A visually appealing prototype that showcases front-end development skills and UI/UX design considerations."
     }
-},
-{
-  title: "gistify",
-  tagline: "An AI-powered webpage summarizer.",
-  tech: ["JavaScript", "AI"],
-  links: {
-      github: "https://github.com/Iankitsinghak/gistify",
-      live: ""
   },
-  featured: false,
-  details: {
-      description: "An AI-powered tool that takes a webpage URL and provides a concise summary of its content, making it easy to digest information quickly.",
-      challenges: "Integrating with a third-party AI service for summarization and handling various webpage structures to extract the main content effectively.",
-      outcomes: "A useful utility that demonstrates the practical application of AI in a web-based tool, showcasing skills in API integration and asynchronous programming."
-  }
-},
-{
-  title: "Similarity-cheaker-from-Books",
-  tagline: "A C++ tool to detect content overlap in texts.",
-  tech: ["C++"],
-  links: {
-      github: "https://github.com/Iankitsinghak/Similarity-cheaker-from-Books",
-      live: ""
+  {
+    title: "gistify",
+    tagline: "An AI-powered webpage summarizer.",
+    tech: ["JavaScript", "AI"],
+    links: {
+        github: "https://github.com/Iankitsinghak/gistify",
+        live: ""
+    },
+    featured: false,
+    details: {
+        description: "An AI-powered tool that takes a webpage URL and provides a concise summary of its content, making it easy to digest information quickly.",
+        challenges: "Integrating with a third-party AI service for summarization and handling various webpage structures to extract the main content effectively.",
+        outcomes: "A useful utility that demonstrates the practical application of AI in a web-based tool, showcasing skills in API integration and asynchronous programming."
+    }
   },
-  featured: false,
-  details: {
-      description: "A command-line tool written in C++ that analyzes text from multiple book files to check for similarity and potential plagiarism.",
-      challenges: "Implementing an efficient algorithm for text comparison and handling large file I/O operations without compromising performance.",
-      outcomes: "A high-performance utility that showcases a strong understanding of C++ and fundamental algorithms for text processing."
+  {
+    title: "Similarity-cheaker-from-Books",
+    tagline: "A C++ tool to detect content overlap in texts.",
+    tech: ["C++"],
+    links: {
+        github: "https://github.com/Iankitsinghak/Similarity-cheaker-from-Books",
+        live: ""
+    },
+    featured: false,
+    details: {
+        description: "A command-line tool written in C++ that analyzes text from multiple book files to check for similarity and potential plagiarism.",
+        challenges: "Implementing an efficient algorithm for text comparison and handling large file I/O operations without compromising performance.",
+        outcomes: "A high-performance utility that showcases a strong understanding of C++ and fundamental algorithms for text processing."
+    }
   }
-}
-]
+];
 
 
 export const skillsData = [
@@ -218,6 +219,52 @@ export const learningBadges = [
   { name: "Docker", icon: Terminal },
   { name: "Kubernetes", icon: Rocket },
 ];
+
+export const certificationsData = [
+  {
+    title: "SQL (Advanced)",
+    issuer: "HackerRank",
+    date: "Issued Jul 2025",
+    credentialId: "B73684D1276B",
+    skills: "SQL, Oracle SQL Developer",
+  },
+  {
+    title: "Object Oriented Programming",
+    issuer: "Daksh Gurukul IIT Guwahati",
+    date: "Issued Jun 2025",
+    credentialId: null,
+    skills: "C++, OOP",
+  },
+  {
+    title: "SQL (Intermediate)",
+    issuer: "HackerRank",
+    date: "Issued Jun 2025",
+    credentialId: "96671AFDCCF1",
+    skills: "SQL",
+  },
+  {
+    title: "SQL (Basic)",
+    issuer: "HackerRank",
+    date: "Issued Jun 2025",
+    credentialId: "1802C83B9E97",
+    skills: "SQL",
+  },
+  {
+    title: "Smart India Hackathon 2024",
+    issuer: "University Rank #2",
+    date: "",
+    credentialId: null,
+    skills: "Led backend development and trained the ML model for the team project.",
+  },
+  {
+    title: "NCC 'B' Certificate",
+    issuer: "National Cadet Corps",
+    date: "",
+    credentialId: null,
+    skills: "Discipline, Leadership, Teamwork",
+  },
+];
+
 
 export const githubContributions = Array.from({ length: 365 }, (_, i) => {
     const date = new Date();
