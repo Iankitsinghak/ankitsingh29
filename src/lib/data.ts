@@ -31,11 +31,39 @@ export const educationTimeline = [
 export const experienceTimeline = [
   {
     icon: Briefcase,
-    title: "DevOps Intern",
-    organization: "Innovate Solutions Ltd.",
-    duration: "Summer 2024",
-    description: "Automated deployment pipelines using Jenkins and Docker, reducing deployment time by 40%.",
-  }
+    title: "Google Student Ambassador",
+    organization: "Google",
+    duration: "Sep 2025 - Present",
+    description: "Representing Google on campus, fostering community engagement, and promoting developer tools.",
+  },
+  {
+    icon: Briefcase,
+    title: "Campus Ambassador",
+    organization: "Unstop",
+    duration: "Aug 2025 - Present",
+    description: "Leveraging team leadership and marketing skills to promote Unstop's platform on-site.",
+  },
+  {
+    icon: Briefcase,
+    title: "Contributor & Campus Ambassador",
+    organization: "GirlScript Summer of Code",
+    duration: "Jun 2025 - Present",
+    description: "Contributed to MERN stack projects and served as the face of GSSoC on campus, honing leadership and networking skills.",
+  },
+  {
+    icon: Briefcase,
+    title: "Public Relations & Outreach Head",
+    organization: "GeeksforGeeks Campus Body",
+    duration: "Jul 2025 - Present",
+    description: "Leading outreach initiatives and managing public relations for the campus chapter.",
+  },
+  {
+    icon: Briefcase,
+    title: "Founder and President",
+    organization: "TERMINAL TROOPS",
+    duration: "May 2025 - Present",
+    description: "Founded and currently leading a community focused on technology and development.",
+  },
 ];
 
 
