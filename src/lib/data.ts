@@ -100,6 +100,36 @@ export const projectsData = [
           outcomes: "A responsive and practical weather application that demonstrates proficiency in working with external APIs and frontend data visualization."
       }
   },
+  {
+    title: "OpenSauce Contribution",
+    tagline: "Contributed to a community-driven DSA repository.",
+    tech: ["Java", "DSA"],
+    links: {
+        github: "https://github.com/Iankitsinghak/OpenSauce",
+        live: ""
+    },
+    featured: false,
+    details: {
+        description: "Contributed data structures and algorithms code to a popular open-source repository aimed at providing a comprehensive collection of DSA implementations.",
+        challenges: "Adhering to the project's coding standards and contribution guidelines, and ensuring the correctness and efficiency of the submitted code.",
+        outcomes: "Successfully merged contributions into the main branch, demonstrating the ability to collaborate on open-source projects and a strong understanding of fundamental computer science concepts."
+    }
+},
+{
+    title: "food-troops",
+    tagline: "A web application for food discovery and ordering.",
+    tech: ["JavaScript", "HTML/CSS"],
+    links: {
+        github: "https://github.com/Iankitsinghak/food-troops",
+        live: ""
+    },
+    featured: false,
+    details: {
+        description: "A front-end application for a food delivery service, allowing users to browse restaurants, view menus, and place orders.",
+        challenges: "Creating a responsive and engaging user interface for browsing a large variety of food options.",
+        outcomes: "A visually appealing prototype that showcases front-end development skills and UI/UX design considerations."
+    }
+},
 ]
 
 
