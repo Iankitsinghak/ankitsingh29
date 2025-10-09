@@ -130,6 +130,36 @@ export const projectsData = [
         outcomes: "A visually appealing prototype that showcases front-end development skills and UI/UX design considerations."
     }
 },
+{
+  title: "gistify",
+  tagline: "An AI-powered webpage summarizer.",
+  tech: ["JavaScript", "AI"],
+  links: {
+      github: "https://github.com/Iankitsinghak/gistify",
+      live: ""
+  },
+  featured: false,
+  details: {
+      description: "An AI-powered tool that takes a webpage URL and provides a concise summary of its content, making it easy to digest information quickly.",
+      challenges: "Integrating with a third-party AI service for summarization and handling various webpage structures to extract the main content effectively.",
+      outcomes: "A useful utility that demonstrates the practical application of AI in a web-based tool, showcasing skills in API integration and asynchronous programming."
+  }
+},
+{
+  title: "Similarity-cheaker-from-Books",
+  tagline: "A C++ tool to detect content overlap in texts.",
+  tech: ["C++"],
+  links: {
+      github: "https://github.com/Iankitsinghak/Similarity-cheaker-from-Books",
+      live: ""
+  },
+  featured: false,
+  details: {
+      description: "A command-line tool written in C++ that analyzes text from multiple book files to check for similarity and potential plagiarism.",
+      challenges: "Implementing an efficient algorithm for text comparison and handling large file I/O operations without compromising performance.",
+      outcomes: "A high-performance utility that showcases a strong understanding of C++ and fundamental algorithms for text processing."
+  }
+}
 ]
 
 
