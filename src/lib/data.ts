@@ -1,3 +1,4 @@
+
 import { GraduationCap, Briefcase, Rocket, BrainCircuit, type LucideIcon, Code, Server, Cloud, GitBranch, Terminal } from "lucide-react";
 
 export const navLinks = [
@@ -12,20 +13,34 @@ export const navLinks = [
 ];
 
 export const educationTimeline = [
-    {
-      icon: GraduationCap,
-      title: "B.Tech in Computer Science",
-      institute: "Lovely Professional University",
-      duration: "2022 - 2026",
-      description: "Key coursework in Data Structures, Algorithms, and System Design.",
-    },
-    {
-      icon: Rocket,
-      title: "High School Diploma",
-      institute: "St. Karen's High School",
-      duration: "2020 - 2022",
-      description: "Focused on Physics, Chemistry, and Mathematics.",
-    },
+  {
+    icon: GraduationCap,
+    title: "B.Tech in Computer Science",
+    institute: "KAZI NAZRUL UNIVERSITY, ASANSOL",
+    duration: "2024 - 2028",
+    description: "Serving as Class Representative. Key skills: Communication and Leadership.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Credit Linked Program in CSE",
+    institute: "Indian Institute of Technology, Guwahati",
+    duration: "2024 - 2025",
+    description: "Coursework in DSA, Computer Architecture, and System Design. Key skills: C++, Teamwork, and Problem Solving.",
+  },
+  {
+    icon: BrainCircuit,
+    title: "AI & Computer Science",
+    institute: "Masai",
+    duration: "2024 - 2025",
+    description: "Focused on developing problem-solving skills with C++ and Data Structures & Algorithms.",
+  },
+  {
+    icon: Rocket,
+    title: "Higher Secondary, Science",
+    institute: "Raghumal Arya vidyalaya",
+    duration: "2021 - 2023",
+    description: "Active in NCC and winner of YPC' 21 at the district level. Key skills: Communication and Team Leadership.",
+  },
 ];
 
 export const experienceTimeline = [
@@ -34,21 +49,21 @@ export const experienceTimeline = [
     title: "Google Student Ambassador",
     organization: "Google",
     duration: "Sep 2025 - Present",
-    description: "Representing Google on campus, fostering community engagement, and promoting developer tools.",
+    description: "Fostering community engagement and promoting developer tools on behalf of Google.",
   },
   {
     icon: Briefcase,
     title: "Campus Ambassador",
     organization: "Unstop",
     duration: "Aug 2025 - Present",
-    description: "Leveraging team leadership and marketing skills to promote Unstop's platform on-site.",
+    description: "Leveraging team leadership and marketing skills to promote Unstop's platform.",
   },
   {
     icon: Briefcase,
     title: "Contributor & Campus Ambassador",
     organization: "GirlScript Summer of Code",
     duration: "Jun 2025 - Present",
-    description: "Contributed to MERN stack projects and served as the face of GSSoC on campus, honing leadership and networking skills.",
+    description: "Contributing to MERN stack projects and representing GSSoC on campus.",
   },
   {
     icon: Briefcase,
