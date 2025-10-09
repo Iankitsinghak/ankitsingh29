@@ -41,50 +41,65 @@ export const experienceTimeline = [
 
 export const projectsData = [
     {
-        title: "CloudFlow CI/CD",
-        tagline: "A lightweight, container-native CI/CD pipeline tool.",
-        tech: ["Go", "Docker", "gRPC", "Kubernetes"],
+        title: "MediTrack",
+        tagline: "A comprehensive solution for tracking medical records and appointments.",
+        tech: ["TypeScript", "React", "Node.js", "MongoDB"],
         links: {
-            github: "https://github.com/Iankitsinghak/CloudFlow-CI-CD",
+            github: "https://github.com/Iankitsinghak/MediTrack",
             live: ""
         },
         featured: true,
         details: {
-            description: "A CI/CD pipeline orchestration tool built from scratch, designed for efficient and scalable builds in a cloud-native environment. It uses Go for performance, Docker for containerization, and gRPC for inter-service communication.",
-            challenges: "Designing a fault-tolerant and distributed job execution system. Implementing a clean, declarative YAML-based pipeline definition.",
-            outcomes: "Achieved parallel job execution, reducing build times by up to 60% compared to sequential scripts. The tool is now used in several personal projects for automated testing and deployment."
+            description: "MediTrack is a full-stack application designed to help users manage their health records, track medical history, and schedule appointments with healthcare providers seamlessly.",
+            challenges: "Implementing a secure authentication system for patient data privacy and ensuring the real-time synchronization of appointment slots across different users.",
+            outcomes: "Developed a user-friendly platform that simplifies medical management. The project demonstrates strong skills in full-stack development, database management, and user-centric design."
         }
     },
     {
-        title: "Infra-Genie",
-        tagline: "Infrastructure-as-Code tool for provisioning cloud resources.",
-        tech: ["Go", "AWS SDK", "YAML"],
+        title: "Sarkari-Sahayak",
+        tagline: "A platform to simplify access to government schemes and services.",
+        tech: ["TypeScript", "Next.js", "TailwindCSS", "Firebase"],
         links: {
-            github: "https://github.com/Iankitsinghak/Infra-Genie",
+            github: "https://github.com/Iankitsinghak/Sarkari-Sahayak",
             live: ""
         },
         featured: false,
         details: {
-            description: "An IaC tool inspired by Terraform for declaratively provisioning cloud resources on AWS. It parses a YAML configuration file and translates it into AWS API calls to create and manage infrastructure.",
-            challenges: "Managing state and dependencies between resources. Ensuring idempotency so that repeated applications of the same configuration produce the same state.",
-            outcomes: "Successfully implemented support for core AWS services like EC2, S3, and VPC. Simplified the process of spinning up and tearing down testing environments."
+            description: "An application aimed at making information about government schemes easily accessible to citizens, featuring search, filtering, and application tracking functionalities.",
+            challenges: "Aggregating and structuring data from various government portals. Creating an intuitive UI that is accessible to users with varying levels of digital literacy.",
+            outcomes: "A valuable resource for citizens that reduces the complexity of finding and applying for government assistance programs."
         }
     },
     {
-        title: "Portfolio Website (v3)",
-        tagline: "This very portfolio, built to be sleek and professional.",
-        tech: ["Next.js", "React", "TailwindCSS", "Framer Motion"],
+        title: "skillforge-x",
+        tagline: "An online platform for skill development and project collaboration.",
+        tech: ["JavaScript", "React", "Express", "PostgreSQL"],
         links: {
-            github: "https://github.com/Iankitsinghak/portfolio-v3",
-            live: "#"
+            github: "https://github.com/Iankitsinghak/skillforge-x",
+            live: ""
         },
         featured: false,
         details: {
-            description: "A personal portfolio website designed to be modern, minimal, and fully responsive. Built with a focus on clean design, smooth animations, and a great user experience.",
-            challenges: "Implementing a responsive and accessible design. Optimizing performance and load times with Next.js features like Server Components and Image Optimization.",
-            outcomes: "A beautiful, performant, and HR-friendly personal site that effectively showcases my skills and projects."
+            description: "A collaborative web application where users can join projects, learn new skills, and showcase their work. It includes features for team formation and progress tracking.",
+            challenges: "Building a real-time chat feature for project teams and designing a recommendation engine to suggest relevant projects to users based on their skills.",
+            outcomes: "A functional MVP that connects learners and builders, fostering a community of collaborative development and continuous learning."
         }
-    }
+    },
+    {
+      title: "smart_weather_dash",
+      tagline: "A smart weather dashboard with real-time data and forecasts.",
+      tech: ["JavaScript", "HTML/CSS", "Weather API"],
+      links: {
+          github: "https://github.com/Iankitsinghak/smart_weather_dash",
+          live: ""
+      },
+      featured: false,
+      details: {
+          description: "A clean and modern weather dashboard that provides current weather conditions, multi-day forecasts, and other meteorological data by integrating with a third-party weather API.",
+          challenges: "Handling asynchronous API calls gracefully and presenting the data in a visually appealing and easy-to-understand format.",
+          outcomes: "A responsive and practical weather application that demonstrates proficiency in working with external APIs and frontend data visualization."
+      }
+  },
 ]
 
 
