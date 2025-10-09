@@ -20,35 +20,42 @@ export default function Hero() {
   const [imageError, setImageError] = useState(false);
 
   return (
-    <section id="home" className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-[800px] flex items-center justify-center overflow-hidden pt-20">
       <div className="absolute inset-0 animated-gradient -z-10"></div>
-      <div className="container grid items-center gap-12 lg:grid-cols-2">
-        <AnimatedDiv className="flex justify-center" delay={0.2}>
-            <div className="relative p-1 rounded-full w-72 h-72 lg:w-96 lg:h-96 animated-border-glow">
-              {!imageError ? (
-                <Image
-                  src="/profile.jpeg"
-                  alt="Ankit Singh's profile picture"
-                  width={384}
-                  height={384}
-                  priority
-                  className="object-cover w-full h-full rounded-full"
-                  data-ai-hint="male portrait"
-                  onError={() => setImageError(true)}
-                />
-              ) : (
+      <div className="container flex flex-col items-center text-center">
+        
+        <AnimatedDiv className="relative group mb-8" delay={0.2}>
+          <div className="profile-image-container">
+            {!imageError ? (
+              <Image
+                src="/profile.jpeg"
+                alt="Ankit Singh's profile picture"
+                width={192}
+                height={192}
+                priority
+                className="profile-image"
+                data-ai-hint="male portrait"
+                onError={() => setImageError(true)}
+              />
+            ) : (
+              <div className="profile-image">
                 <FallbackAvatar />
-              )}
-            </div>
+              </div>
+            )}
+          </div>
+          <p className="profile-name-text">
+            Ankit Singh
+          </p>
         </AnimatedDiv>
-        <AnimatedDiv className="space-y-6 text-center lg:text-left">
+
+        <AnimatedDiv className="space-y-6">
           <h1 className="text-4xl font-bold tracking-tighter text-transparent sm:text-5xl md:text-6xl lg:text-7xl font-headline bg-clip-text bg-gradient-to-br from-gray-200 to-gray-500">
             Building Systems That Scale and Stories That Inspire.
           </h1>
-          <p className="max-w-xl mx-auto text-lg text-muted-foreground/80 lg:mx-0">
+          <p className="max-w-xl mx-auto text-lg text-muted-foreground/80">
             A Computer Science sophomore passionate about DevOps, Cloud Engineering, and creating scalable backend systems that make an impact.
           </p>
-          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
+          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
             <Link href="#projects">
               <Button size="lg" className="w-full text-lg transition-all duration-300 sm:w-auto glow">
                 View Projects

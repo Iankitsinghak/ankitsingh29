@@ -97,6 +97,22 @@
   to { transform: rotate(360deg); }
 }
 
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 25px #00C8FF, 0 0 10px rgba(0, 200, 255, 0.2); }
+  50% { box-shadow: 0 0 35px #00C8FF, 0 0 15px rgba(0, 200, 255, 0.4); }
+  100% { box-shadow: 0 0 25px #00C8FF, 0 0 10px rgba(0, 200, 255, 0.2); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* Dialog/Modal Styles */
 .dialog-content {
     background-color: hsl(var(--card));
@@ -106,4 +122,34 @@
 
 .dialog-header {
     border-bottom: 1px solid hsl(var(--border));
+}
+
+
+/* Hero Section Profile Image */
+.profile-image-container {
+  @apply relative w-48 h-48 cursor-pointer;
+  animation: fade-in 0.8s ease-in-out forwards;
+}
+
+.profile-image {
+  @apply w-full h-full rounded-full object-cover;
+  box-shadow: 0 0 10px rgba(0, 200, 255, 0.2);
+  transition: all 0.4s ease-in-out;
+}
+
+.group:hover .profile-image {
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 0 25px #00C8FF;
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+.profile-name-text {
+  @apply mt-4 text-2xl font-bold tracking-wider opacity-0 transition-all duration-300;
+  text-shadow: 0 0 10px hsla(var(--accent), 0.8);
+  color: #00C8FF;
+}
+
+.group:hover .profile-name-text {
+  animation: fade-up 0.5s ease-out forwards;
+  animation-delay: 0.1s;
 }
