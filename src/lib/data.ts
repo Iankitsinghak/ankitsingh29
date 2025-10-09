@@ -231,6 +231,7 @@ export const githubContributions = Array.from({ length: 365 }, (_, i) => {
   });
 
 export const gfgStats = {
+  score: "900",
   problemsSolved: "250+",
   rank: "4",
 };
