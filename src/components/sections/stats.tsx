@@ -3,8 +3,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AnimatedDiv } from "@/components/animated-div";
 import { Github } from "lucide-react";
-import { gfgStats, githubContributions } from "@/lib/data";
+import { gfgStats, generateGithubContributions } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { useState, useEffect } from "react";
 
 const GFGIcon = () => (
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-current">
@@ -13,7 +14,18 @@ const GFGIcon = () => (
     </svg>
 );
 
+type ContributionDay = {
+  date: string;
+  count: number;
+};
+
 export default function Stats() {
+  const [githubContributions, setGithubContributions] = useState<ContributionDay[]>([]);
+
+  useEffect(() => {
+    setGithubContributions(generateGithubContributions());
+  }, []);
+
   return (
     <section id="stats" className="py-24 sm:py-32 bg-secondary/50">
       <div className="container">

@@ -266,7 +266,8 @@ export const certificationsData = [
 ];
 
 
-export const githubContributions = Array.from({ length: 365 }, (_, i) => {
+export const generateGithubContributions = () =>
+  Array.from({ length: 365 }, (_, i) => {
     const date = new Date();
     date.setDate(date.getDate() - 365 + i);
     const count = Math.random() > 0.3 ? Math.floor(Math.random() * 10) : 0;
