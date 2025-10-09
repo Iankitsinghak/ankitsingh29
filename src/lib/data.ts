@@ -45,7 +45,7 @@ export const projectsData = [
         tagline: "A lightweight, container-native CI/CD pipeline tool.",
         tech: ["Go", "Docker", "gRPC", "Kubernetes"],
         links: {
-            github: "https://github.com/ankitsinglr26",
+            github: "https://github.com/Iankitsinghak/CloudFlow-CI-CD",
             live: ""
         },
         featured: true,
@@ -60,7 +60,7 @@ export const projectsData = [
         tagline: "Infrastructure-as-Code tool for provisioning cloud resources.",
         tech: ["Go", "AWS SDK", "YAML"],
         links: {
-            github: "https://github.com/ankitsinglr26",
+            github: "https://github.com/Iankitsinghak/Infra-Genie",
             live: ""
         },
         featured: false,
@@ -71,11 +71,11 @@ export const projectsData = [
         }
     },
     {
-        title: "Portfolio Website",
+        title: "Portfolio Website (v3)",
         tagline: "This very portfolio, built to be sleek and professional.",
         tech: ["Next.js", "React", "TailwindCSS", "Framer Motion"],
         links: {
-            github: "https://github.com/ankitsinglr26",
+            github: "https://github.com/Iankitsinghak/portfolio-v3",
             live: "#"
         },
         featured: false,
@@ -136,7 +136,7 @@ export const testimonials = [
 ];
 
 export const socialLinks = {
-  github: "https://github.com/ankitsinglr26",
+  github: "https://github.com/Iankitsinghak",
   linkedin: "https://linkedin.com/in/ankitsinglr26",
   resume: "/resume.pdf",
 };
