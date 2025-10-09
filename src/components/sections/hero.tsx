@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { AnimatedDiv } from "@/components/animated-div";
 import Link from "next/link";
 import { useState } from "react";
+import { FileText } from "lucide-react";
+import { socialLinks } from "@/lib/data";
 
 const FallbackAvatar = () => (
     <div className="flex items-center justify-center w-full h-full bg-gray-800 rounded-full">
@@ -52,8 +54,14 @@ export default function Hero() {
                 View Projects
               </Button>
             </Link>
-            <Link href="#contact">
+             <Link href={socialLinks.resume} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="w-full text-lg border-2 sm:w-auto hover:bg-accent hover:text-accent-foreground hover:border-accent">
+                <FileText className="w-5 h-5 mr-2" />
+                Resume
+              </Button>
+            </Link>
+            <Link href="#contact">
+              <Button size="lg" variant="ghost" className="w-full text-lg sm:w-auto">
                 Get in Touch
               </Button>
             </Link>
