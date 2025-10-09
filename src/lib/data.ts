@@ -4,6 +4,7 @@ export const navLinks = [
   { name: "Home", hash: "#home" },
   { name: "Education", hash: "#education" },
   { name: "Experience", hash: "#experience" },
+  { name: "Projects", hash: "#projects" },
   { name: "Skills", hash: "#skills" },
   { name: "Stats", hash: "#stats" },
   { name: "Testimonials", hash: "#testimonials" },
@@ -34,22 +35,58 @@ export const experienceTimeline = [
     organization: "Innovate Solutions Ltd.",
     duration: "Summer 2024",
     description: "Automated deployment pipelines using Jenkins and Docker, reducing deployment time by 40%.",
-  },
-  {
-    icon: Rocket,
-    title: "CloudFlow CI/CD",
-    organization: "Personal Project",
-    duration: "Ongoing",
-    description: "A lightweight, container-native CI/CD pipeline orchestration tool built with Go, Docker, and gRPC for efficient, scalable builds.",
-  },
-  {
-    icon: Server,
-    title: "Infra-Genie",
-    organization: "Personal Project",
-    duration: "3 Months",
-    description: "An Infrastructure-as-Code (IaC) tool for provisioning cloud resources on AWS using a declarative YAML syntax, inspired by Terraform.",
-  },
+  }
 ];
+
+
+export const projectsData = [
+    {
+        title: "CloudFlow CI/CD",
+        tagline: "A lightweight, container-native CI/CD pipeline tool.",
+        tech: ["Go", "Docker", "gRPC", "Kubernetes"],
+        links: {
+            github: "https://github.com/ankitsinglr26",
+            live: ""
+        },
+        featured: true,
+        details: {
+            description: "A CI/CD pipeline orchestration tool built from scratch, designed for efficient and scalable builds in a cloud-native environment. It uses Go for performance, Docker for containerization, and gRPC for inter-service communication.",
+            challenges: "Designing a fault-tolerant and distributed job execution system. Implementing a clean, declarative YAML-based pipeline definition.",
+            outcomes: "Achieved parallel job execution, reducing build times by up to 60% compared to sequential scripts. The tool is now used in several personal projects for automated testing and deployment."
+        }
+    },
+    {
+        title: "Infra-Genie",
+        tagline: "Infrastructure-as-Code tool for provisioning cloud resources.",
+        tech: ["Go", "AWS SDK", "YAML"],
+        links: {
+            github: "https://github.com/ankitsinglr26",
+            live: ""
+        },
+        featured: false,
+        details: {
+            description: "An IaC tool inspired by Terraform for declaratively provisioning cloud resources on AWS. It parses a YAML configuration file and translates it into AWS API calls to create and manage infrastructure.",
+            challenges: "Managing state and dependencies between resources. Ensuring idempotency so that repeated applications of the same configuration produce the same state.",
+            outcomes: "Successfully implemented support for core AWS services like EC2, S3, and VPC. Simplified the process of spinning up and tearing down testing environments."
+        }
+    },
+    {
+        title: "Portfolio Website",
+        tagline: "This very portfolio, built to be sleek and professional.",
+        tech: ["Next.js", "React", "TailwindCSS", "Framer Motion"],
+        links: {
+            github: "https://github.com/ankitsinglr26",
+            live: "#"
+        },
+        featured: false,
+        details: {
+            description: "A personal portfolio website designed to be modern, minimal, and fully responsive. Built with a focus on clean design, smooth animations, and a great user experience.",
+            challenges: "Implementing a responsive and accessible design. Optimizing performance and load times with Next.js features like Server Components and Image Optimization.",
+            outcomes: "A beautiful, performant, and HR-friendly personal site that effectively showcases my skills and projects."
+        }
+    }
+]
+
 
 export const skillsData = [
   { skill: "DevOps", level: 85 },

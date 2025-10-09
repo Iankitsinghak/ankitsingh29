@@ -96,3 +96,14 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+/* Dialog/Modal Styles */
+.dialog-content {
+    background-color: hsl(var(--card));
+    color: hsl(var(--card-foreground));
+    border: 1px solid hsl(var(--border));
+}
+
+.dialog-header {
+    border-bottom: 1px solid hsl(var(--border));
+}

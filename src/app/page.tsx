@@ -3,6 +3,7 @@ import Footer from '@/components/layout/footer';
 import Hero from '@/components/sections/hero';
 import EducationTimeline from '@/components/sections/education-timeline';
 import Experience from '@/components/sections/experience';
+import Projects from '@/components/sections/projects';
 import Skills from '@/components/sections/skills';
 import Stats from '@/components/sections/stats';
 import Testimonials from '@/components/sections/testimonials';
@@ -19,6 +20,8 @@ export default function Home() {
         <EducationTimeline />
         <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
         <Experience />
+        <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
+        <Projects />
         <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
         <Skills />
         <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
