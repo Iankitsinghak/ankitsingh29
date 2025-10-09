@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { AnimatedDiv } from "@/components/animated-div";
 import Link from "next/link";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function Hero() {
   const profileImage = PlaceHolderImages.find(p => p.id === 'profile-picture');
