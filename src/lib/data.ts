@@ -88,14 +88,14 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "CloudFlow CI/CD",
-    tagline: "A lightweight, container-native CI/CD pipeline orchestration tool built with Go.",
-    tech: ["Go", "Docker", "Kubernetes", "gRPC"],
-    description: "CloudFlow is a CI/CD automation server designed to run build, test, and deployment pipelines in isolated Docker containers. It uses a YAML-based configuration for defining pipelines and communicates with worker nodes via gRPC for distributed task execution.",
-    challenges: "Designing a fault-tolerant, distributed architecture and ensuring secure container execution were the main challenges. Managing state across worker nodes and creating an intuitive pipeline DSL also required significant effort.",
-    outcomes: "Successfully created a PoC that could run parallel stages across multiple nodes, reducing build times for a sample application by 60%. The project provided deep insights into distributed systems and container orchestration.",
-    github: "https://github.com",
-    live: "https://example.com",
+    title: "Your Awesome Project",
+    tagline: "A brief and catchy tagline for your project.",
+    tech: ["React", "Next.js", "Tailwind CSS", "Firebase"],
+    description: "A detailed description of your project. Talk about its purpose, features, and what makes it unique. This is your chance to shine and show off your skills!",
+    challenges: "What were the most significant challenges you faced while building this? This could be anything from technical hurdles to design problems. This shows your problem-solving skills.",
+    outcomes: "What was the result of your project? Did you launch it? Did you learn something new? What are you most proud of? Highlight the impact of your work.",
+    github: "https://github.com/your-username/your-repo",
+    live: "https://your-live-demo.com",
     imageId: "project-1",
   },
   {
