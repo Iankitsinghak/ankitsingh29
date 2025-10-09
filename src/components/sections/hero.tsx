@@ -20,7 +20,7 @@ export default function Hero() {
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
             <Link href="#projects">
-              <Button size="lg" className="w-full text-lg transition-all duration-300 sm:w-auto hover:glow">
+              <Button size="lg" className="w-full text-lg transition-all duration-300 sm:w-auto">
                 View Projects
               </Button>
             </Link>
