@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "profile-picture",
+      "description": "Ankit Singh's profile picture",
+      "imageUrl": "https://picsum.photos/seed/profile-ankit/400/400",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "project-1",
+      "description": "Abstract representation of CI/CD pipelines and cloud flow.",
+      "imageUrl": "https://picsum.photos/seed/project-one/600/400",
+      "imageHint": "abstract code"
+    },
+    {
+      "id": "project-2",
+      "description": "Cloud infrastructure and network visualization.",
+      "imageUrl": "https://picsum.photos/seed/project-two/600/400",
+      "imageHint": "cloud network"
+    },
+    {
+      "id": "project-3",
+      "description": "Data logs and streams of information.",
+      "imageUrl": "https://picsum.photos/seed/project-three/600/400",
+      "imageHint": "data stream"
+    }
+  ]
 }
