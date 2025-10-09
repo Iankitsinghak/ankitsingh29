@@ -8,6 +8,19 @@ export default function Hero() {
     <section id="home" className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/10 animated-gradient -z-10"></div>
       <div className="container grid items-center gap-12 lg:grid-cols-2">
+        <AnimatedDiv className="flex justify-center" delay={0.2}>
+            <div className="relative p-1 rounded-full w-72 h-72 lg:w-96 lg:h-96 animated-border-glow">
+              <Image
+                src="/profile.jpeg"
+                alt="Ankit Singh's profile picture"
+                width={384}
+                height={384}
+                priority
+                className="object-cover w-full h-full rounded-full"
+                data-ai-hint="male portrait"
+              />
+            </div>
+        </AnimatedDiv>
         <AnimatedDiv className="space-y-6 text-center lg:text-left">
           <h1 className="text-4xl font-bold tracking-tighter text-transparent sm:text-5xl md:text-6xl lg:text-7xl font-headline bg-clip-text bg-gradient-to-br from-gray-200 to-gray-500">
             Hi, I’m Ankit Singh
@@ -30,19 +43,6 @@ export default function Hero() {
               </Button>
             </Link>
           </div>
-        </AnimatedDiv>
-        <AnimatedDiv className="flex justify-center" delay={0.2}>
-            <div className="relative p-1 rounded-full w-72 h-72 lg:w-96 lg:h-96 animated-border-glow">
-              <Image
-                src="/profile.jpeg"
-                alt="Ankit Singh's profile picture"
-                width={384}
-                height={384}
-                priority
-                className="object-cover w-full h-full rounded-full"
-                data-ai-hint="male portrait"
-              />
-            </div>
         </AnimatedDiv>
       </div>
     </section>
