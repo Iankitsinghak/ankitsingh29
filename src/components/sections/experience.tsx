@@ -28,10 +28,10 @@ export default function Experience() {
         <div className="container">
             <AnimatedDiv>
                 <h2 className="text-3xl font-bold text-center font-headline sm:text-4xl">
-                💼 Experience & Projects
+                💼 Professional Experience
                 </h2>
                 <p className="mt-4 text-center text-muted-foreground">
-                My professional journey and key projects I've worked on.
+                A timeline of my professional roles and contributions.
                 </p>
             </AnimatedDiv>
 
