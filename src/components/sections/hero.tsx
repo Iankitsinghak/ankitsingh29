@@ -43,7 +43,7 @@ export default function Hero() {
                 width={384}
                 height={384}
                 priority
-                className="object-cover w-full h-full rounded-full"
+                className="object-cover w-full h-full rounded-full grayscale"
                 data-ai-hint={profileImage.imageHint}
               />
             </div>
