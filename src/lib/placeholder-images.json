@@ -3,7 +3,7 @@
     {
       "id": "profile-picture",
       "description": "Ankit Singh's profile picture",
-      "imageUrl": "https://picsum.photos/seed/profile-ankit/400/400",
+      "imageUrl": "/profile-picture.jpg",
       "imageHint": "male portrait"
     },
     {
