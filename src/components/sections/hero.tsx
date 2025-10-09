@@ -2,11 +2,8 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { AnimatedDiv } from "@/components/animated-div";
 import Link from "next/link";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function Hero() {
-  const profileImage = PlaceHolderImages.find(p => p.id === 'profile-picture');
-
   return (
     <section id="home" className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/10 animated-gradient -z-10"></div>
@@ -35,19 +32,17 @@ export default function Hero() {
           </div>
         </AnimatedDiv>
         <AnimatedDiv className="flex justify-center" delay={0.2}>
-          {profileImage && (
             <div className="relative p-1 rounded-full w-72 h-72 lg:w-96 lg:h-96 animated-border-glow">
               <Image
-                src={profileImage.imageUrl}
-                alt={profileImage.description}
+                src="/profile.jpeg"
+                alt="Ankit Singh's profile picture"
                 width={384}
                 height={384}
                 priority
                 className="object-cover w-full h-full rounded-full"
-                data-ai-hint={profileImage.imageHint}
+                data-ai-hint="male portrait"
               />
             </div>
-          )}
         </AnimatedDiv>
       </div>
     </section>
