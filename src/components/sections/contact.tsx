@@ -25,7 +25,7 @@ export default function Contact() {
               <Input type="text" placeholder="Your Name" className="bg-background/50" />
               <Input type="email" placeholder="Your Email" className="bg-background/50" />
               <Textarea placeholder="Your Message" className="min-h-[150px] bg-background/50" />
-              <Button type="submit" className="w-full">
+              <Button type="submit" className="w-full glow">
                 Send Message
               </Button>
             </form>
@@ -36,7 +36,7 @@ export default function Contact() {
           <div className="space-y-6">
             <div>
               <h3 className="text-xl font-semibold">Email</h3>
-              <a href="mailto:ankit@example.com" className="text-muted-foreground hover:text-accent transition-colors">
+              <a href="mailto:ankit.singh@example.com" className="text-muted-foreground hover:text-accent transition-colors">
                 ankit.singh@example.com
               </a>
             </div>

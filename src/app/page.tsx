@@ -1,13 +1,13 @@
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import Hero from '@/components/sections/hero';
-import Timeline from '@/components/sections/timeline';
+import EducationTimeline from '@/components/sections/education-timeline';
+import Experience from '@/components/sections/experience';
 import Skills from '@/components/sections/skills';
 import Stats from '@/components/sections/stats';
-import Projects from '@/components/sections/projects';
-import Journey from '@/components/sections/journey';
 import Testimonials from '@/components/sections/testimonials';
 import Contact from '@/components/sections/contact';
+import { Separator } from '@/components/ui/separator';
 
 export default function Home() {
   return (
@@ -15,12 +15,17 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <Timeline />
+        <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
+        <EducationTimeline />
+        <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
+        <Experience />
+        <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
         <Skills />
+        <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
         <Stats />
-        <Projects />
-        <Journey />
+        <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
         <Testimonials />
+        <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
         <Contact />
       </main>
       <Footer />

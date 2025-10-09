@@ -1,17 +1,33 @@
-import { professionalTimeline } from "@/lib/data";
+import { educationTimeline } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { AnimatedDiv } from "@/components/animated-div";
 
-export default function Timeline() {
+function TimelineCard(item: (typeof educationTimeline)[0]) {
   return (
-    <section id="timeline" className="container py-24 sm:py-32">
+    <Card className="transition-all duration-300 border-2 bg-card/50 border-transparent hover:border-accent hover:soft-glow">
+      <CardHeader>
+        <div className="flex items-center justify-between">
+          <CardTitle className="text-xl font-headline">{item.title}</CardTitle>
+          <p className="text-sm text-muted-foreground">{item.duration}</p>
+        </div>
+        <p className="text-sm font-semibold text-foreground/80">{item.institute}</p>
+      </CardHeader>
+      <CardContent>
+        <p className="text-sm">{item.description}</p>
+      </CardContent>
+    </Card>
+  );
+}
+
+export default function EducationTimeline() {
+  return (
+    <section id="education" className="container py-24 sm:py-32">
       <AnimatedDiv>
         <h2 className="text-3xl font-bold text-center font-headline sm:text-4xl">
-          Building Systems That Scale — and Stories That Inspire.
+          📘 Education Timeline
         </h2>
         <p className="mt-4 text-center text-muted-foreground">
-          My professional journey and key milestones.
+          My academic journey and key learning milestones.
         </p>
       </AnimatedDiv>
 
@@ -20,7 +36,7 @@ export default function Timeline() {
         <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-border/50 hidden md:block" />
 
         <div className="space-y-8">
-          {professionalTimeline.map((item, index) => (
+          {educationTimeline.map((item, index) => (
             <AnimatedDiv key={index} delay={index * 0.1}>
               <div className="flex flex-col items-center md:flex-row md:justify-between">
                 {/* Content Left */}
@@ -43,26 +59,5 @@ export default function Timeline() {
         </div>
       </div>
     </section>
-  );
-}
-
-function TimelineCard(item: (typeof professionalTimeline)[0]) {
-  return (
-    <Card className="transition-all duration-300 border-2 hover:border-accent hover:soft-glow">
-      <CardHeader>
-        <div className="flex items-center justify-between">
-          <CardTitle className="text-xl font-headline">{item.title}</CardTitle>
-          {item.logo && (
-            <div className="p-1 rounded-md bg-secondary">
-              <item.logo className="w-6 h-6 text-foreground" />
-            </div>
-          )}
-        </div>
-        <p className="text-sm text-muted-foreground">{item.duration}</p>
-      </CardHeader>
-      <CardContent>
-        <p className="text-sm">{item.description}</p>
-      </CardContent>
-    </Card>
   );
 }
