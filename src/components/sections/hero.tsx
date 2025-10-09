@@ -49,7 +49,7 @@ export default function Hero() {
             A Computer Science sophomore passionate about DevOps, Cloud Engineering, and creating scalable backend systems that make an impact.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
-            <Link href="#experience">
+            <Link href="#projects">
               <Button size="lg" className="w-full text-lg transition-all duration-300 sm:w-auto glow">
                 View Projects
               </Button>
