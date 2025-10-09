@@ -8,7 +8,6 @@ export const navLinks = [
   { name: "Projects", hash: "#projects" },
   { name: "Skills", hash: "#skills" },
   { name: "Stats", hash: "#stats" },
-  { name: "Testimonials", hash: "#testimonials" },
   { name: "Contact", hash: "#contact" },
 ];
 
@@ -235,24 +234,6 @@ export const gfgStats = {
   problemsSolved: "250+",
   rank: "4",
 };
-
-export const testimonials = [
-  {
-    quote: "Ankit is a smart, consistent, and reliable developer who can be counted on to deliver high-quality work on time.",
-    name: "Dr. Alisha Sharma",
-    title: "Professor, CSE Department",
-  },
-  {
-    quote: "He has a rare ability to understand complex systems deeply and communicate his ideas clearly. A true team player.",
-    name: "Rohan Verma",
-    title: "Senior DevOps Engineer & Mentor",
-  },
-  {
-    quote: "Working with Ankit on our cloud project was a great experience. His passion for automation and scalability is infectious.",
-    name: "Priya Desai",
-    title: "Peer & Project Collaborator",
-  },
-];
 
 export const socialLinks = {
   github: "https://github.com/Iankitsinghak",

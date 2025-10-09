@@ -6,7 +6,6 @@ import Experience from '@/components/sections/experience';
 import Projects from '@/components/sections/projects';
 import Skills from '@/components/sections/skills';
 import Stats from '@/components/sections/stats';
-import Testimonials from '@/components/sections/testimonials';
 import Contact from '@/components/sections/contact';
 import { Separator } from '@/components/ui/separator';
 
@@ -26,8 +25,6 @@ export default function Home() {
         <Skills />
         <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
         <Stats />
-        <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
-        <Testimonials />
         <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
         <Contact />
       </main>
