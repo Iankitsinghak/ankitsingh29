@@ -22,9 +22,9 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-[800px] flex items-center justify-center overflow-hidden pt-20">
       <div className="absolute inset-0 animated-gradient -z-10"></div>
-      <div className="container grid items-center grid-cols-1 gap-12 text-center md:grid-cols-2 md:text-left">
+      <div className="container text-center">
         
-        <AnimatedDiv className="relative flex justify-center md:justify-start" delay={0.2}>
+        <AnimatedDiv className="relative flex justify-center" delay={0.2}>
           <div className="flex flex-col items-center">
             <div className="profile-image-wrapper">
               <div className="profile-image-container">
@@ -53,14 +53,19 @@ export default function Hero() {
           </div>
         </AnimatedDiv>
 
-        <AnimatedDiv className="space-y-6">
+        <AnimatedDiv className="mt-8 space-y-6">
           <h1 className="text-4xl font-bold tracking-tighter text-transparent sm:text-5xl md:text-6xl lg:text-7xl font-headline bg-clip-text bg-gradient-to-br from-gray-200 to-gray-500">
             Building Systems That Scale and Stories That Inspire.
           </h1>
-          <p className="max-w-xl mx-auto text-lg md:mx-0 text-muted-foreground/80">
+          <AnimatedDiv delay={0.8}>
+            <p className="max-w-2xl mx-auto text-lg font-semibold text-gray-300">
+              Building my journey — one project, one idea, one line of code at a time.
+            </p>
+          </AnimatedDiv>
+          <p className="max-w-xl mx-auto text-lg md:mx-auto text-muted-foreground/80">
             A Computer Science sophomore passionate about DevOps, Cloud Engineering, and creating scalable backend systems that make an impact.
           </p>
-          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center md:justify-start">
+          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
             <Link href="#projects">
               <Button size="lg" className="w-full text-lg transition-all duration-300 sm:w-auto glow">
                 View Projects
