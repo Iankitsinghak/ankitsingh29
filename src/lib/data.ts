@@ -207,9 +207,9 @@ export const projectsData = [
 
 export const skillsData = [
   { skill: "DevOps", level: 85 },
-  { skill: "Cloud", level: 90 },
+  { skill: "System Architect", level: 90 },
   { skill: "Backend", level: 80 },
-  { skill: "DSA", level: 75 },
+  { skill: "DSA", level: 95 },
   { skill: "AI Tools", level: 70 },
 ];
 
