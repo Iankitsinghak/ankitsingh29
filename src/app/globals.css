@@ -76,9 +76,9 @@
 }
 
 @keyframes pulse-glow {
-  0% { box-shadow: 0 0 25px hsl(var(--accent)), 0 0 60px hsla(var(--accent), 0.15); }
-  50% { box-shadow: 0 0 35px hsl(var(--accent)), 0 0 70px hsla(var(--accent), 0.25); }
-  100% { box-shadow: 0 0 25px hsl(var(--accent)), 0 0 60px hsla(var(--accent), 0.15); }
+  0% { box-shadow: 0 0 60px hsla(var(--accent), 0.15); }
+  50% { box-shadow: 0 0 70px hsla(var(--accent), 0.25); }
+  100% { box-shadow: 0 0 60px hsla(var(--accent), 0.15); }
 }
 
 @keyframes fade-in {
