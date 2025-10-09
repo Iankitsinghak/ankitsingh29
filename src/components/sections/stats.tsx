@@ -68,7 +68,7 @@ export default function Stats() {
                   <CardTitle className="font-headline">GFG Practice Stats</CardTitle>
                 </div>
               </CardHeader>
-              <CardContent className="flex flex-col items-center justify-center h-full gap-6 text-center">
+              <CardContent className="flex flex-col justify-center h-full gap-6">
                 <div className="space-y-4">
                     <div>
                         <p className="text-4xl font-bold text-accent">{gfgStats.problemsSolved}</p>
@@ -76,7 +76,7 @@ export default function Stats() {
                     </div>
                     <div>
                         <p className="text-4xl font-bold text-accent">#{gfgStats.rank}</p>
-                        <p className="text-muted-foreground">Platform Rank</p>
+                        <p className="text-muted-foreground">University Rank</p>
                     </div>
                 </div>
               </CardContent>
