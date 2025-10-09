@@ -52,10 +52,10 @@ export default function Header() {
   return (
     <header className={cn(
       "sticky top-0 z-50 transition-all duration-300",
-      isScrolled ? "bg-background/80 backdrop-blur-lg border-b border-border/50" : "bg-transparent"
+      isScrolled || isOpen ? "bg-background/80 backdrop-blur-lg border-b border-border/50" : "bg-transparent"
     )}>
       <div className="container flex items-center justify-between h-20">
-        <Link href="/" className="text-xl font-bold font-headline transition-colors hover:text-accent">
+        <Link href="/" className="text-xl font-bold transition-colors font-headline hover:text-accent">
           Ankit Singh
         </Link>
         <nav className="hidden md:flex items-center gap-1">
@@ -66,13 +66,13 @@ export default function Header() {
               asChild
               className={cn(
                 "relative transition-colors",
-                activeSection === link.hash.substring(1) ? "text-accent" : "text-foreground"
+                activeSection === link.hash.substring(1) ? "text-accent" : "text-foreground hover:text-foreground/80"
               )}
             >
               <a href={link.hash} onClick={(e) => { e.preventDefault(); handleLinkClick(link.hash); }}>
                 {link.name}
                 {activeSection === link.hash.substring(1) && (
-                  <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-4 h-[2px] bg-accent rounded-full" />
+                  <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-accent rounded-full" />
                 )}
               </a>
             </Button>
@@ -85,10 +85,10 @@ export default function Header() {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-lg pb-4">
-          <nav className="flex flex-col items-center gap-4">
+        <div className="absolute top-full left-0 w-full bg-background/95 backdrop-blur-lg md:hidden border-t border-border/50">
+          <nav className="container flex flex-col items-center py-4">
             {navLinks.map((link) => (
-              <Button key={link.hash} variant="ghost" asChild className={cn(activeSection === link.hash.substring(1) ? "text-accent" : "text-foreground")}>
+              <Button key={link.hash} variant="ghost" asChild className={cn("w-full text-lg", activeSection === link.hash.substring(1) ? "text-accent" : "text-foreground")}>
                 <a href={link.hash} onClick={(e) => { e.preventDefault(); handleLinkClick(link.hash); }}>{link.name}</a>
               </Button>
             ))}
