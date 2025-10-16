@@ -65,9 +65,9 @@ export default function Hero() {
           <p className="max-w-xl mx-auto text-lg md:mx-auto text-muted-foreground/80">
             A Computer Science sophomore passionate about DevOps, Cloud Engineering, and creating scalable backend systems that make an impact.
           </p>
-          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+          <div className="relative flex flex-col gap-4 overflow-hidden sm:flex-row sm:justify-center button-glow-container rounded-xl">
             <Link href="#projects">
-              <Button size="lg" className="w-full text-lg transition-all duration-300 sm:w-auto glow">
+              <Button size="lg" className="w-full text-lg transition-all duration-300 sm:w-auto">
                 View Projects
               </Button>
             </Link>
