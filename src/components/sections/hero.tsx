@@ -24,7 +24,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveButtonIndex((prevIndex) => (prevIndex + 1) % 3);
-    }, 2500); // Change button every 2.5 seconds to match animation
+    }, 1500);
 
     return () => clearInterval(interval);
   }, []);
