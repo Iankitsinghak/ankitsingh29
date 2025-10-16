@@ -8,8 +8,8 @@ export default function IntroAnimation() {
 
   useEffect(() => {
     const sequence = async () => {
-      // Wait for text to be visible for 1s
-      await new Promise(resolve => setTimeout(resolve, 3500)); 
+      // Wait for the animation to play
+      await new Promise(resolve => setTimeout(resolve, 3000)); 
       
       // Then fade out
       setIsVisible(false);
@@ -19,19 +19,19 @@ export default function IntroAnimation() {
   }, []);
 
   const nameVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 1.5, ease: 'easeOut' } },
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
   };
 
   const taglineVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 1.5, ease: 'easeOut', delay: 1 } },
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut', delay: 0.5 } },
   };
   
   const containerVariants = {
     hidden: { opacity: 1 },
     visible: { opacity: 1 },
-    exit: { opacity: 0, transition: { duration: 1.5, ease: 'easeOut' } }
+    exit: { opacity: 0, transition: { duration: 1.0, ease: 'easeOut' } }
   };
 
   return (
@@ -43,10 +43,6 @@ export default function IntroAnimation() {
           initial="hidden"
           animate="visible"
           exit="exit"
-          onAnimationComplete={() => {
-            // Optional: to remove from DOM after animation
-            // document.querySelector('.intro-overlay')?.remove();
-          }}
         >
           <motion.h1
             className="text-5xl font-bold text-foreground md:text-7xl font-headline"
