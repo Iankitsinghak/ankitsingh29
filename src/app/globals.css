@@ -233,12 +233,8 @@
     transparent 20%
   );
   animation: traveling-glow 5s linear infinite;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.button-glow-container:hover::before {
   opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 @keyframes traveling-glow {

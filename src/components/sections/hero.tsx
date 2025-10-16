@@ -67,7 +67,7 @@ export default function Hero() {
           </p>
           <div className="relative flex flex-col gap-4 overflow-hidden sm:flex-row sm:justify-center button-glow-container rounded-xl">
             <Link href="#projects">
-              <Button size="lg" className="w-full text-lg transition-all duration-300 sm:w-auto">
+              <Button size="lg" variant="outline" className="w-full text-lg border-2 sm:w-auto hover:bg-accent hover:text-accent-foreground hover:border-accent">
                 View Projects
               </Button>
             </Link>
@@ -78,7 +78,7 @@ export default function Hero() {
               </Button>
             </Link>
             <Link href="#contact">
-              <Button size="lg" variant="ghost" className="w-full text-lg sm:w-auto">
+              <Button size="lg" variant="outline" className="w-full text-lg border-2 sm:w-auto hover:bg-accent hover:text-accent-foreground hover:border-accent">
                 Get in Touch
               </Button>
             </Link>
