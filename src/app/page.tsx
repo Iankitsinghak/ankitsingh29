@@ -10,6 +10,7 @@ import Contact from '@/components/sections/contact';
 import { Separator } from '@/components/ui/separator';
 import Certifications from '@/components/sections/certifications';
 import IntroAnimation from '@/components/intro-animation';
+import Terminal from '@/components/sections/terminal';
 
 export default function Home() {
   return (
@@ -27,6 +28,8 @@ export default function Home() {
           <Projects />
           <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
           <Skills />
+          <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
+          <Terminal />
           <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
           <Certifications />
           <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />

@@ -212,3 +212,42 @@
     @apply fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background;
     font-family: 'Space Grotesk', sans-serif;
 }
+
+/* Terminal Section */
+.terminal-window {
+  font-family: 'Fira Code', 'Source Code Pro', monospace;
+  @apply border-2 border-border bg-black/50 rounded-lg shadow-2xl soft-glow;
+  backdrop-filter: blur(10px);
+}
+.terminal-header {
+  @apply flex items-center px-4 py-2 border-b-2 border-border;
+}
+.terminal-buttons {
+  @apply flex gap-2;
+}
+.terminal-button {
+  @apply w-3 h-3 rounded-full;
+}
+.terminal-body {
+  @apply p-4 min-h-[120px] text-sm lg:text-base;
+}
+.terminal-prompt {
+  @apply flex items-center;
+}
+.terminal-prompt > span {
+  @apply text-accent font-bold;
+}
+.terminal-command {
+  @apply text-foreground;
+}
+
+.blinking-cursor {
+  @apply inline-block bg-accent w-2 h-4 ml-1;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
