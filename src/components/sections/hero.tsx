@@ -101,7 +101,7 @@ export default function Hero() {
           <p className="max-w-xl mx-auto text-lg md:mx-auto text-muted-foreground/80">
             A Computer Science sophomore passionate about DevOps, Cloud Engineering, and creating scalable backend systems that make an impact.
           </p>
-           <div className="relative flex flex-col gap-4 sm:flex-row sm:justify-center">
+           <div className="relative flex flex-row flex-wrap justify-center gap-2 sm:gap-4">
               <Link href="#projects" passHref>
                 <Button ref={buttonRefs[0] as React.Ref<HTMLButtonElement>} size="lg" variant="outline" className="w-full text-lg border-2 sm:w-auto hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300">
                   View Projects
