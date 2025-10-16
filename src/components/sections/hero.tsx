@@ -24,7 +24,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveButtonIndex((prevIndex) => (prevIndex + 1) % 3);
-    }, 2000); // Change button every 2 seconds
+    }, 2500); // Change button every 2.5 seconds to match animation
 
     return () => clearInterval(interval);
   }, []);
@@ -78,18 +78,18 @@ export default function Hero() {
           </p>
            <div className="relative flex flex-row flex-wrap justify-center gap-2 sm:gap-4">
               <Link href="#projects" passHref>
-                <Button size="lg" variant="outline" className={cn("w-full text-lg border-2 sm:w-auto transition-all duration-300", activeButtonIndex === 0 ? "glowing-border" : "border-input")}>
+                <Button size="lg" variant="outline" className={cn("w-full text-lg border-2 sm:w-auto transition-all duration-300 border-input", activeButtonIndex === 0 ? "glossy-active" : "")}>
                   View Projects
                 </Button>
               </Link>
               <Link href={socialLinks.resume} target="_blank" rel="noopener noreferrer" passHref>
-                <Button size="lg" variant="outline" className={cn("w-full text-lg border-2 sm:w-auto transition-all duration-300", activeButtonIndex === 1 ? "glowing-border" : "border-input")}>
+                <Button size="lg" variant="outline" className={cn("w-full text-lg border-2 sm:w-auto transition-all duration-300 border-input", activeButtonIndex === 1 ? "glossy-active" : "")}>
                   <FileText className="w-5 h-5 mr-2" />
                   Resume
                 </Button>
               </Link>
               <Link href="#contact" passHref>
-                <Button size="lg" variant="outline" className={cn("w-full text-lg border-2 sm:w-auto transition-all duration-300", activeButtonIndex === 2 ? "glowing-border" : "border-input")}>
+                <Button size="lg" variant="outline" className={cn("w-full text-lg border-2 sm:w-auto transition-all duration-300 border-input", activeButtonIndex === 2 ? "glossy-active" : "")}>
                   Get in Touch
                 </Button>
               </Link>

@@ -64,8 +64,21 @@
     animation: gradient-animation 15s ease infinite;
   }
 
-  .glowing-border {
-    animation: glowing-border 2s ease-in-out;
+  .glossy-active {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glossy-active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    transform: translateX(-100%);
+    background: linear-gradient(100deg, transparent 30%, hsla(0,0%,100%,0.1) 50%, transparent 70%);
+    animation: glossy-sweep 2.5s ease-in-out forwards;
   }
 }
 
@@ -256,17 +269,11 @@
   }
 }
 
-@keyframes glowing-border {
+@keyframes glossy-sweep {
   0% {
-    border-color: hsl(var(--border));
-    box-shadow: none;
-  }
-  50% {
-    border-color: hsl(var(--accent));
-    box-shadow: 0 0 10px hsl(var(--accent) / 0.5);
+    transform: translateX(-100%);
   }
   100% {
-    border-color: hsl(var(--border));
-    box-shadow: none;
+    transform: translateX(100%);
   }
 }
