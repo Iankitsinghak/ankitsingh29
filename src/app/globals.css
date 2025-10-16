@@ -212,35 +212,3 @@
     @apply fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background;
     font-family: 'Space Grotesk', sans-serif;
 }
-
-/* Traveling Glow Animation */
-.button-glow-container {
-  @apply relative;
-}
-
-.button-glow-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  background: radial-gradient(
-    circle at var(--x, 0) var(--y, 0),
-    hsl(var(--primary) / 0.5),
-    transparent 20%
-  );
-  animation: traveling-glow 4s linear infinite;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-@keyframes traveling-glow {
-  0% { --x: -10%; --y: -10%; }
-  25% { --x: 110%; --y: -10%; }
-  50% { --x: 110%; --y: 110%; }
-  75% { --x: -10%; --y: 110%; }
-  100% { --x: -10%; --y: -10%; }
-}
