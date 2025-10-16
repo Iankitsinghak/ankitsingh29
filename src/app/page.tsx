@@ -9,29 +9,33 @@ import Stats from '@/components/sections/stats';
 import Contact from '@/components/sections/contact';
 import { Separator } from '@/components/ui/separator';
 import Certifications from '@/components/sections/certifications';
+import IntroAnimation from '@/components/intro-animation';
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <main className="flex-1">
-        <Hero />
-        <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
-        <EducationTimeline />
-        <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
-        <Experience />
-        <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
-        <Projects />
-        <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
-        <Skills />
-        <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
-        <Certifications />
-        <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
-        <Stats />
-        <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <IntroAnimation />
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <main className="flex-1">
+          <Hero />
+          <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
+          <EducationTimeline />
+          <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
+          <Experience />
+          <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
+          <Projects />
+          <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
+          <Skills />
+          <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
+          <Certifications />
+          <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
+          <Stats />
+          <Separator className="bg-gradient-to-r from-transparent via-accent/20 to-transparent h-[1px]" />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }
