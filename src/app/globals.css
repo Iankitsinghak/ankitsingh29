@@ -232,15 +232,15 @@
     hsl(var(--primary) / 0.5),
     transparent 20%
   );
-  animation: traveling-glow 5s linear infinite;
+  animation: traveling-glow 4s linear infinite;
   opacity: 1;
   transition: opacity 0.3s ease;
 }
 
 @keyframes traveling-glow {
-  0% { --x: -10%; --y: 50%; }
-  25% { --x: 50%; --y: 110%; }
-  50% { --x: 110%; --y: 50%; }
-  75% { --x: 50%; --y: -10%; }
-  100% { --x: -10%; --y: 50%; }
+  0% { --x: -10%; --y: -10%; }
+  25% { --x: 110%; --y: -10%; }
+  50% { --x: 110%; --y: 110%; }
+  75% { --x: -10%; --y: 110%; }
+  100% { --x: -10%; --y: -10%; }
 }
