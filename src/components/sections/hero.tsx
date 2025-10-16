@@ -4,10 +4,11 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { AnimatedDiv } from "@/components/animated-div";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FileText } from "lucide-react";
 import { socialLinks } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
 
 const FallbackAvatar = () => (
     <div className="flex items-center justify-center w-full h-full bg-gray-800 rounded-full">
@@ -19,15 +20,39 @@ const FallbackAvatar = () => (
 
 export default function Hero() {
   const [imageError, setImageError] = useState(false);
-  const [glowingButtonIndex, setGlowingButtonIndex] = useState(0);
+  const [underlineStyle, setUnderlineStyle] = useState({});
+  const [activeButtonIndex, setActiveButtonIndex] = useState(0);
+
+  const buttonRefs = [
+    useRef<HTMLButtonElement | null>(null),
+    useRef<HTMLButtonElement | null>(null),
+    useRef<HTMLButtonElement | null>(null),
+  ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setGlowingButtonIndex((prevIndex) => (prevIndex + 1) % 3);
-    }, 2000); // Change button every 2 seconds
+    const updateUnderline = () => {
+      const currentButton = buttonRefs[activeButtonIndex]?.current;
+      if (currentButton) {
+        setUnderlineStyle({
+          width: currentButton.offsetWidth,
+          left: currentButton.offsetLeft,
+        });
+      }
+    };
+    
+    updateUnderline();
 
-    return () => clearInterval(interval);
-  }, []);
+    const interval = setInterval(() => {
+      setActiveButtonIndex((prevIndex) => (prevIndex + 1) % 3);
+    }, 2000);
+
+    window.addEventListener('resize', updateUnderline);
+
+    return () => {
+        clearInterval(interval);
+        window.removeEventListener('resize', updateUnderline);
+    }
+  }, [activeButtonIndex]);
 
 
   return (
@@ -76,24 +101,29 @@ export default function Hero() {
           <p className="max-w-xl mx-auto text-lg md:mx-auto text-muted-foreground/80">
             A Computer Science sophomore passionate about DevOps, Cloud Engineering, and creating scalable backend systems that make an impact.
           </p>
-          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-            <Link href="#projects">
-              <Button size="lg" variant="outline" className={cn("w-full text-lg border-2 sm:w-auto hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300", { "glow": glowingButtonIndex === 0 })}>
-                View Projects
-              </Button>
-            </Link>
-             <Link href={socialLinks.resume} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className={cn("w-full text-lg border-2 sm:w-auto hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300", { "glow": glowingButtonIndex === 1 })}>
-                <FileText className="w-5 h-5 mr-2" />
-                Resume
-              </Button>
-            </Link>
-            <Link href="#contact">
-              <Button size="lg" variant="outline" className={cn("w-full text-lg border-2 sm:w-auto hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300", { "glow": glowingButtonIndex === 2 })}>
-                Get in Touch
-              </Button>
-            </Link>
-          </div>
+           <div className="relative flex flex-col gap-4 sm:flex-row sm:justify-center">
+              <Link href="#projects" passHref>
+                <Button ref={buttonRefs[0] as React.Ref<HTMLButtonElement>} size="lg" variant="outline" className="w-full text-lg border-2 sm:w-auto hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300">
+                  View Projects
+                </Button>
+              </Link>
+              <Link href={socialLinks.resume} target="_blank" rel="noopener noreferrer" passHref>
+                <Button ref={buttonRefs[1] as React.Ref<HTMLButtonElement>} size="lg" variant="outline" className="w-full text-lg border-2 sm:w-auto hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300">
+                  <FileText className="w-5 h-5 mr-2" />
+                  Resume
+                </Button>
+              </Link>
+              <Link href="#contact" passHref>
+                <Button ref={buttonRefs[2] as React.Ref<HTMLButtonElement>} size="lg" variant="outline" className="w-full text-lg border-2 sm:w-auto hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300">
+                  Get in Touch
+                </Button>
+              </Link>
+              <motion.div
+                className="absolute -bottom-2 h-0.5 bg-accent"
+                animate={underlineStyle}
+                transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+              />
+            </div>
         </AnimatedDiv>
       </div>
     </section>
