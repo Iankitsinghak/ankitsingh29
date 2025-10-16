@@ -63,6 +63,10 @@
     background-size: 200% 200%;
     animation: gradient-animation 15s ease infinite;
   }
+
+  .glowing-border {
+    animation: glowing-border 2s ease-in-out;
+  }
 }
 
 @keyframes gradient-animation {
@@ -249,5 +253,20 @@
 @keyframes blink {
   50% {
     opacity: 0;
+  }
+}
+
+@keyframes glowing-border {
+  0% {
+    border-color: hsl(var(--border));
+    box-shadow: none;
+  }
+  50% {
+    border-color: hsl(var(--accent));
+    box-shadow: 0 0 10px hsl(var(--accent) / 0.5);
+  }
+  100% {
+    border-color: hsl(var(--border));
+    box-shadow: none;
   }
 }
