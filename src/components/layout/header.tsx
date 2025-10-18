@@ -11,7 +11,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 const Typewriter = () => {
   const words = ["Welcome", "to", "my", "portfolio", "ankitsinghak"];
-  const colors = ["text-accent", "text-green-400", "text-yellow-400", "text-purple-400", "text-pink-400"];
+  const colors = ["text-accent", "text-foreground"];
   const [wordIndex, setWordIndex] = useState(0);
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
