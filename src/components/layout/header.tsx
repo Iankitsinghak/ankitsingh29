@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
@@ -9,7 +10,7 @@ import { navLinks, socialLinks } from '@/lib/data';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const Typewriter = () => {
-  const words = ["Welcome", "to", "my", "portfolio", "ankitsinghak"];
+  const words = ['Initiating...', 'Bypassing security...', 'Access granted.', 'ankitsinghak'];
   const [wordIndex, setWordIndex] = useState(0);
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
