@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
@@ -7,6 +8,58 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { navLinks, socialLinks } from '@/lib/data';
 import { AnimatePresence, motion } from 'framer-motion';
+
+const Typewriter = () => {
+  const words = ["Welcome", "to", "my", "portfolio", "ankitsinghak"];
+  const [wordIndex, setWordIndex] = useState(0);
+  const [text, setText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const typingSpeed = 150;
+  const deletingSpeed = 75;
+  const delay = 1500;
+
+  useEffect(() => {
+    const handleTyping = () => {
+      const currentWord = words[wordIndex];
+      const shouldDelete = isDeleting;
+
+      if (shouldDelete) {
+        setText((prev) => prev.substring(0, prev.length - 1));
+      } else {
+        setText((prev) => currentWord.substring(0, prev.length + 1));
+      }
+
+      // If word is fully typed
+      if (!isDeleting && text === currentWord) {
+        // If it's the last word, stop the animation
+        if (wordIndex === words.length - 1) {
+          return;
+        }
+        // Pause before starting to delete
+        setTimeout(() => setIsDeleting(true), delay);
+      } 
+      // If word is fully deleted
+      else if (isDeleting && text === '') {
+        setIsDeleting(false);
+        setWordIndex((prev) => (prev + 1) % words.length);
+      }
+    };
+
+    const speed = isDeleting ? deletingSpeed : typingSpeed;
+    const timeout = setTimeout(handleTyping, speed);
+
+    return () => clearTimeout(timeout);
+  }, [text, isDeleting, wordIndex]);
+
+  return (
+    <Link href="/" className="text-xl font-bold transition-colors font-headline">
+      &lt;{text}
+      <span className="blinking-cursor-inline"></span>
+      &gt;
+    </Link>
+  );
+};
+
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState('home');
@@ -56,11 +109,7 @@ export default function Header() {
       isScrolled || isOpen ? "bg-background/80 backdrop-blur-lg border-b border-border/50" : "bg-transparent"
     )}>
       <div className="container flex items-center justify-between h-20">
-        <div className="glitch-container">
-            <Link href="/" className="glitch-link text-xl font-bold transition-colors font-headline" data-text="<ankitsinghak>">
-            &lt;ankitsinghak&gt;
-            </Link>
-        </div>
+        <Typewriter />
         <div className="flex items-center gap-4">
           <nav className="items-center hidden gap-1 md:flex">
             {navLinks.map((link) => (
