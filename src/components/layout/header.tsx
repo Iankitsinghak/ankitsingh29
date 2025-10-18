@@ -57,7 +57,7 @@ export default function Header() {
     )}>
       <div className="container flex items-center justify-between h-20">
         <Link href="/" className="text-xl font-bold transition-colors font-headline hover:text-accent">
-          Ankit Singh
+          &lt;ankitsinghak&gt;
         </Link>
         <div className="flex items-center gap-4">
           <nav className="items-center hidden gap-1 md:flex">
