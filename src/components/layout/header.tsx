@@ -10,15 +10,20 @@ import { navLinks, socialLinks } from '@/lib/data';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const Typewriter = () => {
-  const words = ['Designing systems.', 'Automating deployment.', 'Scaling for the cloud.', 'ankitsinghak'];
+  const initialWords = ['Compiling assets...', 'Running build script...', 'Deployment successful.', 'ankitsinghak'];
+  const loopingWords = ['Designing systems.', 'Automating deployment.', 'Scaling for the cloud.', 'ankitsinghak'];
+
+  const [currentWords, setCurrentWords] = useState(initialWords);
   const [wordIndex, setWordIndex] = useState(0);
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [animationStarted, setAnimationStarted] = useState(false);
+  const [sequenceState, setSequenceState] = useState('initial'); // 'initial', 'looping'
+
   const typingSpeed = 50;
   const deletingSpeed = 30;
-  const delay = 1500;
-  const loopDelay = 5000;
+  const wordDelay = 1500;
+  const sequencePause = 5000;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -34,7 +39,7 @@ const Typewriter = () => {
     }
 
     const handleTyping = () => {
-      const currentWord = words[wordIndex];
+      const currentWord = currentWords[wordIndex];
       const shouldDelete = isDeleting;
 
       if (shouldDelete) {
@@ -43,22 +48,32 @@ const Typewriter = () => {
         setText((prev) => currentWord.substring(0, prev.length + 1));
       }
 
-      // If word is fully typed
+      // Word fully typed
       if (!isDeleting && text === currentWord) {
-        // If it's the last word, pause then restart the loop
-        if (wordIndex === words.length - 1) {
+        // If it's the last word of the sequence
+        if (wordIndex === currentWords.length - 1) {
+          if (sequenceState === 'initial') {
+            // Pause after initial sequence, then switch to looping
             setTimeout(() => {
-                setIsDeleting(true);
-            }, loopDelay);
-            return;
+              setCurrentWords(loopingWords);
+              setSequenceState('looping');
+              setIsDeleting(true); 
+            }, sequencePause);
+          } else {
+            // Pause at end of looping sequence before restarting loop
+            setTimeout(() => {
+              setIsDeleting(true);
+            }, wordDelay);
+          }
+        } else {
+          // Pause before deleting current word
+          setTimeout(() => setIsDeleting(true), wordDelay);
         }
-        // Pause before starting to delete
-        setTimeout(() => setIsDeleting(true), delay);
-      } 
-      // If word is fully deleted
+      }
+      // Word fully deleted
       else if (isDeleting && text === '') {
         setIsDeleting(false);
-        setWordIndex((prev) => (prev + 1) % words.length);
+        setWordIndex((prev) => (prev + 1) % currentWords.length);
       }
     };
 
@@ -66,7 +81,7 @@ const Typewriter = () => {
     const timeout = setTimeout(handleTyping, speed);
 
     return () => clearTimeout(timeout);
-  }, [text, isDeleting, wordIndex, animationStarted]);
+  }, [text, isDeleting, wordIndex, animationStarted, currentWords, sequenceState]);
 
   return (
     <Link href="/" className="text-xl font-bold transition-colors font-code text-accent">
