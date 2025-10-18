@@ -11,7 +11,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 const Typewriter = () => {
   const words = ["Welcome", "to", "my", "portfolio", "ankitsinghak"];
-  const colors = ["text-accent", "text-foreground"];
   const [wordIndex, setWordIndex] = useState(0);
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -64,12 +63,10 @@ const Typewriter = () => {
 
     return () => clearTimeout(timeout);
   }, [text, isDeleting, wordIndex, animationStarted]);
-  
-  const currentColor = colors[wordIndex % colors.length];
 
   return (
     <Link href="/" className="text-xl font-bold transition-colors font-headline">
-      <span className={cn(currentColor, "transition-colors duration-500")}>
+      <span className="text-accent">
         &lt;{text}&gt;
       </span>
     </Link>
