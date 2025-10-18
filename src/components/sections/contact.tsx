@@ -21,10 +21,10 @@ export default function Contact() {
       <div className="grid grid-cols-1 gap-12 mt-12 lg:grid-cols-2">
         <AnimatedDiv delay={0.1}>
           <div className="p-8 border rounded-lg bg-card/50 backdrop-blur-sm border-white/10">
-            <form className="space-y-6">
-              <Input type="text" placeholder="Your Name" className="bg-background/50" />
-              <Input type="email" placeholder="Your Email" className="bg-background/50" />
-              <Textarea placeholder="Your Message" className="min-h-[150px] bg-background/50" />
+            <form action="mailto:ankitsinghak9051@gmail.com" method="post" encType="text/plain" className="space-y-6">
+              <Input type="text" name="name" placeholder="Your Name" className="bg-background/50" />
+              <Input type="email" name="email" placeholder="Your Email" className="bg-background/50" />
+              <Textarea name="message" placeholder="Your Message" className="min-h-[150px] bg-background/50" />
               <Button type="submit" className="w-full glow">
                 Send Message
               </Button>
@@ -36,8 +36,8 @@ export default function Contact() {
           <div className="space-y-6">
             <div>
               <h3 className="text-xl font-semibold">Email</h3>
-              <a href="mailto:ankit.singh@example.com" className="text-muted-foreground hover:text-accent transition-colors">
-                ankit.singh@example.com
+              <a href="mailto:ankitsinghak9051@gmail.com" className="text-muted-foreground hover:text-accent transition-colors">
+                ankitsinghak9051@gmail.com
               </a>
             </div>
             <div>
