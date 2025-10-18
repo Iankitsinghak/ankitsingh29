@@ -11,6 +11,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 const Typewriter = () => {
   const words = ["Welcome", "to", "my", "portfolio", "ankitsinghak"];
+  const colors = ["text-accent", "text-green-400", "text-yellow-400", "text-purple-400", "text-pink-400"];
   const [wordIndex, setWordIndex] = useState(0);
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -54,7 +55,7 @@ const Typewriter = () => {
       // If word is fully deleted
       else if (isDeleting && text === '') {
         setIsDeleting(false);
-        setWordIndex((prev) => (prev + 1) % words.length);
+        setWordIndex((prev) => (prev + 1));
       }
     };
 
@@ -63,10 +64,14 @@ const Typewriter = () => {
 
     return () => clearTimeout(timeout);
   }, [text, isDeleting, wordIndex, animationStarted]);
+  
+  const currentColor = colors[wordIndex % colors.length];
 
   return (
-    <Link href="/" className="text-xl font-bold transition-colors text-accent font-headline">
-      &lt;{text}&gt;
+    <Link href="/" className="text-xl font-bold transition-colors font-headline">
+      <span className={cn(currentColor, "transition-colors duration-500")}>
+        &lt;{text}&gt;
+      </span>
     </Link>
   );
 };
