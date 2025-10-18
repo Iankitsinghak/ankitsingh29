@@ -56,9 +56,11 @@ export default function Header() {
       isScrolled || isOpen ? "bg-background/80 backdrop-blur-lg border-b border-border/50" : "bg-transparent"
     )}>
       <div className="container flex items-center justify-between h-20">
-        <Link href="/" className="text-xl font-bold transition-colors font-headline hover:text-accent">
-          &lt;ankitsinghak&gt;
-        </Link>
+        <div className="glitch-container">
+            <Link href="/" className="glitch-link text-xl font-bold transition-colors font-headline" data-text="<ankitsinghak>">
+            &lt;ankitsinghak&gt;
+            </Link>
+        </div>
         <div className="flex items-center gap-4">
           <nav className="items-center hidden gap-1 md:flex">
             {navLinks.map((link) => (
