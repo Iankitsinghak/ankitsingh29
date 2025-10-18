@@ -15,8 +15,8 @@ const Typewriter = () => {
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [animationStarted, setAnimationStarted] = useState(false);
-  const typingSpeed = 100;
-  const deletingSpeed = 50;
+  const typingSpeed = 50;
+  const deletingSpeed = 30;
   const delay = 1500;
 
   useEffect(() => {
@@ -65,7 +65,7 @@ const Typewriter = () => {
   }, [text, isDeleting, wordIndex, animationStarted]);
 
   return (
-    <Link href="/" className="text-xl font-bold transition-colors font-headline">
+    <Link href="/" className="text-xl font-bold transition-colors text-accent font-headline">
       &lt;{text}&gt;
     </Link>
   );
