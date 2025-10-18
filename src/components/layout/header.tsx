@@ -10,7 +10,7 @@ import { navLinks, socialLinks } from '@/lib/data';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const Typewriter = () => {
-  const words = ['Initiating...', 'Bypassing security...', 'Access granted.', 'ankitsinghak'];
+  const words = ['Designing systems.', 'Automating deployment.', 'Scaling for the cloud.', 'ankitsinghak'];
   const [wordIndex, setWordIndex] = useState(0);
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -18,6 +18,7 @@ const Typewriter = () => {
   const typingSpeed = 50;
   const deletingSpeed = 30;
   const delay = 1500;
+  const loopDelay = 5000;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -44,9 +45,12 @@ const Typewriter = () => {
 
       // If word is fully typed
       if (!isDeleting && text === currentWord) {
-        // If it's the last word, stop the animation
+        // If it's the last word, pause then restart the loop
         if (wordIndex === words.length - 1) {
-          return;
+            setTimeout(() => {
+                setIsDeleting(true);
+            }, loopDelay);
+            return;
         }
         // Pause before starting to delete
         setTimeout(() => setIsDeleting(true), delay);
@@ -54,7 +58,7 @@ const Typewriter = () => {
       // If word is fully deleted
       else if (isDeleting && text === '') {
         setIsDeleting(false);
-        setWordIndex((prev) => (prev + 1));
+        setWordIndex((prev) => (prev + 1) % words.length);
       }
     };
 
