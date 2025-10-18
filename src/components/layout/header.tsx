@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
@@ -66,7 +65,7 @@ const Typewriter = () => {
 
   return (
     <Link href="/" className="text-xl font-bold transition-colors font-headline">
-      <span className="text-accent">
+      <span className="text-foreground">
         &lt;{text}&gt;
       </span>
     </Link>
