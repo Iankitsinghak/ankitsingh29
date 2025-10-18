@@ -18,7 +18,7 @@ const Typewriter = () => {
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [animationStarted, setAnimationStarted] = useState(false);
-  const [sequenceState, setSequenceState] = useState('initial'); // 'initial', 'looping'
+  const [sequenceState, setSequenceState] = useState('initial'); // 'initial', 'looping', 'finished'
 
   const typingSpeed = 50;
   const deletingSpeed = 30;
@@ -34,7 +34,7 @@ const Typewriter = () => {
   }, []);
 
   useEffect(() => {
-    if (!animationStarted) {
+    if (!animationStarted || sequenceState === 'finished') {
       return;
     }
 
@@ -57,13 +57,12 @@ const Typewriter = () => {
             setTimeout(() => {
               setCurrentWords(loopingWords);
               setSequenceState('looping');
+              setWordIndex(0);
               setIsDeleting(true); 
             }, sequencePause);
-          } else {
-            // Pause at end of looping sequence before restarting loop
-            setTimeout(() => {
-              setIsDeleting(true);
-            }, wordDelay);
+          } else if (sequenceState === 'looping') {
+            // End of the second sequence, so we stop here.
+            setSequenceState('finished');
           }
         } else {
           // Pause before deleting current word
@@ -73,7 +72,7 @@ const Typewriter = () => {
       // Word fully deleted
       else if (isDeleting && text === '') {
         setIsDeleting(false);
-        setWordIndex((prev) => (prev + 1) % currentWords.length);
+        setWordIndex((prev) => prev + 1);
       }
     };
 
