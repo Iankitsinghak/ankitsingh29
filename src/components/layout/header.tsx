@@ -14,11 +14,24 @@ const Typewriter = () => {
   const [wordIndex, setWordIndex] = useState(0);
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
-  const typingSpeed = 150;
-  const deletingSpeed = 75;
+  const [animationStarted, setAnimationStarted] = useState(false);
+  const typingSpeed = 100;
+  const deletingSpeed = 50;
   const delay = 1500;
 
   useEffect(() => {
+    const timer = setTimeout(() => {
+      setAnimationStarted(true);
+    }, 3000); // Delay to match the intro animation
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (!animationStarted) {
+      return;
+    }
+
     const handleTyping = () => {
       const currentWord = words[wordIndex];
       const shouldDelete = isDeleting;
@@ -49,13 +62,11 @@ const Typewriter = () => {
     const timeout = setTimeout(handleTyping, speed);
 
     return () => clearTimeout(timeout);
-  }, [text, isDeleting, wordIndex]);
+  }, [text, isDeleting, wordIndex, animationStarted]);
 
   return (
     <Link href="/" className="text-xl font-bold transition-colors font-headline">
-      &lt;{text}
-      <span className="blinking-cursor-inline"></span>
-      &gt;
+      &lt;{text}&gt;
     </Link>
   );
 };
