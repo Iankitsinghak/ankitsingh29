@@ -65,7 +65,7 @@ const Typewriter = () => {
   }, [text, isDeleting, wordIndex, animationStarted]);
 
   return (
-    <Link href="/" className="text-xl font-bold transition-colors font-code text-green-400">
+    <Link href="/" className="text-xl font-bold transition-colors font-code text-accent">
       <span>
         &lt;{text}&gt;
       </span>
