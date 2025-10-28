@@ -1,3 +1,4 @@
+
 "use client";
 
 import {
@@ -10,7 +11,7 @@ import {
   Tooltip,
 } from "recharts";
 import { AnimatedDiv } from "@/components/animated-div";
-import { skillsData, learningBadges } from "@/lib/data";
+import { skillsData, learningBadges, coreCompetencies } from "@/lib/data";
 import { Badge } from "@/components/ui/badge";
 
 export default function Skills() {
@@ -66,6 +67,19 @@ export default function Skills() {
             <p className="mt-2 text-center text-muted-foreground lg:text-left">
               These are the areas where I focus most of my energy and passion.
             </p>
+            <div className="flex flex-wrap justify-center gap-3 mt-4 lg:justify-start">
+              {coreCompetencies.map((badge, index) => (
+                <AnimatedDiv key={badge.name} delay={0.3 + index * 0.05}>
+                  <Badge
+                    variant="secondary"
+                    className="flex items-center gap-2 p-2 px-3 text-sm transition-all duration-300 border-2 border-transparent cursor-pointer hover:border-accent hover:soft-glow"
+                  >
+                    <badge.icon className="w-5 h-5 text-accent" />
+                    {badge.name}
+                  </Badge>
+                </AnimatedDiv>
+              ))}
+            </div>
           </div>
           <div>
             <h3 className="text-2xl font-bold text-center font-headline lg:text-left">

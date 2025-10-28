@@ -182,7 +182,8 @@ export const projectsData = [
         live: ""
     },
     featured: false,
-    details: {
+    details:
+    {
         description: "An AI-powered tool that takes a webpage URL and provides a concise summary of its content, making it easy to digest information quickly.",
         challenges: "Integrating with a third-party AI service for summarization and handling various webpage structures to extract the main content effectively.",
         outcomes: "A useful utility that demonstrates the practical application of AI in a web-based tool, showcasing skills in API integration and asynchronous programming."
@@ -212,6 +213,14 @@ export const skillsData = [
   { skill: "Backend", level: 80 },
   { skill: "DSA", level: 95 },
   { skill: "AI Tools", level: 70 },
+];
+
+export const coreCompetencies = [
+  { name: "C", icon: Code },
+  { name: "C++", icon: Code },
+  { name: "Java", icon: Code },
+  { name: "JavaScript", icon: Code },
+  { name: "OOPs", icon: BrainCircuit },
 ];
 
 export const learningBadges = [
