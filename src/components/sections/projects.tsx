@@ -18,7 +18,7 @@ export default function Projects() {
   const otherProjects = projectsData.filter(p => !p.featured);
 
   const ProjectCard = ({ project }: { project: (typeof projectsData)[0] }) => (
-    <Card className="flex flex-col h-full transition-all duration-300 border-2 bg-card/50 border-transparent hover:border-accent hover:soft-glow">
+    <Card className="flex flex-col h-full frosted-card">
       <CardHeader>
         <CardTitle className="font-headline">{project.title}</CardTitle>
         <p className="text-sm text-muted-foreground">{project.tagline}</p>

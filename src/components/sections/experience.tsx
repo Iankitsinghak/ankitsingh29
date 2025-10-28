@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 function TimelineCard(item: (typeof experienceTimeline)[0]) {
   return (
-    <Card className="transition-all duration-300 border-2 bg-card/50 border-transparent hover:border-accent hover:soft-glow">
+    <Card className="frosted-card">
       <CardHeader>
         <div className="flex items-center justify-between">
           <CardTitle className="text-xl font-headline">{item.title}</CardTitle>

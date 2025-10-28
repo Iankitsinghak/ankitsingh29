@@ -40,7 +40,7 @@ export default function Stats() {
         <div className="grid grid-cols-1 gap-8 mt-12 lg:grid-cols-3">
           {/* GitHub Stats */}
           <AnimatedDiv className="lg:col-span-2" delay={0.1}>
-            <Card className="h-full transition-all duration-300 border-2 hover:border-accent hover:soft-glow">
+            <Card className="h-full frosted-card">
               <CardHeader>
                 <div className="flex items-center gap-2">
                   <Github className="w-6 h-6" />
@@ -73,7 +73,7 @@ export default function Stats() {
 
           {/* GFG Stats */}
           <AnimatedDiv delay={0.2}>
-            <Card className="h-full transition-all duration-300 border-2 hover:border-accent hover:soft-glow">
+            <Card className="h-full frosted-card">
               <CardHeader>
                  <div className="flex items-center gap-2">
                   <GFGIcon />

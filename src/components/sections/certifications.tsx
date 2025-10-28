@@ -19,7 +19,7 @@ export default function Certifications() {
       <div className="grid grid-cols-1 gap-8 mt-12 md:grid-cols-2 lg:grid-cols-3">
         {certificationsData.map((cert, index) => (
           <AnimatedDiv key={index} delay={index * 0.1}>
-            <Card className="flex flex-col h-full transition-all duration-300 border-2 bg-card/50 border-transparent hover:border-accent hover:soft-glow">
+            <Card className="flex flex-col h-full frosted-card">
               <CardHeader>
                 <div className="flex items-start gap-4">
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 text-accent">

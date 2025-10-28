@@ -80,6 +80,49 @@
     background: linear-gradient(100deg, transparent 40%, hsla(0,0%,100%,0.2) 50%, transparent 60%);
     animation: glossy-sweep 1.5s ease-in-out forwards;
   }
+
+  .frosted-card {
+    @apply relative overflow-hidden transition-all duration-300 bg-card/50 backdrop-blur-sm border border-transparent;
+  }
+
+  .frosted-card::before,
+  .frosted-card::after {
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+
+  /* Top-left frosted glow */
+  .frosted-card::before {
+    top: -2px;
+    left: -2px;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at top left, hsla(var(--accent), 0.3), transparent 60%);
+    filter: blur(20px);
+  }
+
+  /* Bottom-right neon edge */
+  .frosted-card::after {
+    bottom: -2px;
+    right: -2px;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to top left, hsla(var(--accent), 0.5), transparent 50%);
+  }
+
+  .frosted-card:hover {
+    border-color: hsl(var(--accent) / 0.2);
+    box-shadow: 0 0 30px hsla(var(--accent), 0.1);
+  }
+
+  .frosted-card:hover::before,
+  .frosted-card:hover::after {
+    opacity: 1;
+  }
 }
 
 @keyframes gradient-animation {
