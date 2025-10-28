@@ -81,48 +81,51 @@
     animation: glossy-sweep 1.5s ease-in-out forwards;
   }
 
-  /* Dual-Corner Neon Pulse effect */
+  /* Animated Corner Trace effect */
   .frosted-card {
-    @apply relative overflow-visible transition-all duration-300 bg-card/50 backdrop-blur-sm border border-transparent;
+    @apply relative overflow-hidden transition-all duration-300 bg-card/50 backdrop-blur-sm border border-transparent;
+    background-image: linear-gradient(to top right, hsl(var(--card)), hsl(var(--card)));
   }
   
   .frosted-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 20px hsla(var(--accent), 0.1);
-    border-color: hsl(var(--accent) / 0.1);
+    background-image: linear-gradient(to top right, hsl(var(--card) / 0.8), hsl(var(--accent) / 0.05));
   }
 
   .frosted-card::before,
   .frosted-card::after {
     content: '';
     position: absolute;
-    width: 12px;
-    height: 12px;
-    opacity: 0;
+    width: 0;
+    height: 0;
     pointer-events: none;
-    background: transparent;
     border-style: solid;
     border-color: hsl(var(--accent));
+    border-width: 0;
+    transition: all 0.4s ease-out;
   }
 
   .frosted-card::before {
-    top: -2px;
-    left: -2px;
-    border-width: 2px 0 0 2px;
-    border-top-left-radius: 0.5rem;
+    top: 0;
+    left: 0;
+    border-top-width: 2px;
+    border-left-width: 2px;
   }
 
   .frosted-card::after {
-    bottom: -2px;
-    right: -2px;
-    border-width: 0 2px 2px 0;
-    border-bottom-right-radius: 0.5rem;
+    bottom: 0;
+    right: 0;
+    border-bottom-width: 2px;
+    border-right-width: 2px;
   }
-
+  
   .frosted-card:hover::before,
   .frosted-card:hover::after {
-    animation: corner-pulse 0.7s ease-out forwards;
+    width: 30px;
+    height: 30px;
   }
+
 }
 
 @keyframes gradient-animation {
