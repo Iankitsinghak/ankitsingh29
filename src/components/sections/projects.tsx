@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Github, ExternalLink, X } from 'lucide-react';
+import { Github, ExternalLink, X, ArrowRight } from 'lucide-react';
 import { projectsData } from '@/lib/data';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -76,6 +76,14 @@ export default function Projects() {
             </AnimatedDiv>
           ))}
         </div>
+
+        <AnimatedDiv className="mt-12 text-center">
+          <Link href="https://github.com/ankitsinglr26" target="_blank">
+            <Button variant="ghost">
+              View All Projects <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </Link>
+        </AnimatedDiv>
 
         {selectedProject && (
           <DialogContent className="max-w-3xl">

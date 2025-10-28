@@ -58,13 +58,6 @@ export default function Experience() {
                 ))}
                 </div>
             </div>
-            <AnimatedDiv className="mt-12 text-center">
-                <Link href="https://github.com/ankitsinglr26" target="_blank">
-                    <Button variant="ghost">
-                        View All Projects <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                </Link>
-            </AnimatedDiv>
         </div>
     </section>
   );
