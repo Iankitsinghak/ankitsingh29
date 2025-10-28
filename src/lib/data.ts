@@ -89,7 +89,7 @@ export const projectsData = [
         tech: ["TypeScript", "React", "Node.js", "MongoDB"],
         links: {
             github: "https://github.com/Iankitsinghak/MediTrack",
-            live: ""
+            live: "https://medi-track-indol.vercel.app"
         },
         featured: true,
         details: {
@@ -104,7 +104,7 @@ export const projectsData = [
         tech: ["TypeScript", "Next.js", "TailwindCSS", "Firebase"],
         links: {
             github: "https://github.com/Iankitsinghak/Sarkari-Sahayak",
-            live: ""
+            live: "https://sarkari-sahayak.vercel.app"
         },
         featured: false,
         details: {
@@ -119,7 +119,7 @@ export const projectsData = [
         tech: ["JavaScript", "React", "Express", "PostgreSQL"],
         links: {
             github: "https://github.com/Iankitsinghak/skillforge-x",
-            live: ""
+            live: "https://skillforge-x.vercel.app"
         },
         featured: false,
         details: {
@@ -134,7 +134,7 @@ export const projectsData = [
     tech: ["JavaScript", "HTML/CSS", "Weather API"],
     links: {
         github: "https://github.com/Iankitsinghak/smart_weather_dash",
-        live: ""
+        live: "https://smart-weather-dash.vercel.app"
     },
     featured: false,
     details: {
@@ -164,7 +164,7 @@ export const projectsData = [
     tech: ["JavaScript", "HTML/CSS"],
     links: {
         github: "https://github.com/Iankitsinghak/food-troops",
-        live: ""
+        live: "https://food-troops.vercel.app"
     },
     featured: false,
     details: {
@@ -179,7 +179,7 @@ export const projectsData = [
     tech: ["JavaScript", "AI"],
     links: {
         github: "https://github.com/Iankitsinghak/gistify",
-        live: ""
+        live: "https://gistify-snowy.vercel.app"
     },
     featured: false,
     details:
