@@ -215,13 +215,27 @@ export const skillsData = [
   { skill: "AI Tools", level: 70 },
 ];
 
-export const coreCompetencies = [
+export const coreCompetencies: { name: string; icon: LucideIcon }[] = [
   { name: "C", icon: Code },
   { name: "C++", icon: Code },
   { name: "Java", icon: Code },
+  { name: "Python", icon: Code },
   { name: "JavaScript", icon: Code },
+  { name: "TypeScript", icon: Code },
   { name: "OOPs", icon: BrainCircuit },
+  { name: "React", icon: Code },
+  { name: "Next.js", icon: Code },
+  { name: "Node.js", icon: Server },
+  { name: "Express.js", icon: Server },
+  { name: "Flask", icon: Server },
+  { name: "Spring Boot", icon: Server },
+  { name: "PostgreSQL", icon: Server },
+  { name: "MongoDB", icon: Server },
+  { name: "Tailwind CSS", icon: Code },
+  { name: "Docker", icon: Terminal },
+  { name: "Git & GitHub", icon: GitBranch },
 ];
+
 
 export const learningBadges = [
   { name: "AWS", icon: Cloud },
