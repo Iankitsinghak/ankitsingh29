@@ -81,47 +81,47 @@
     animation: glossy-sweep 1.5s ease-in-out forwards;
   }
 
+  /* Dual-Corner Neon Pulse effect */
   .frosted-card {
-    @apply relative overflow-hidden transition-all duration-300 bg-card/50 backdrop-blur-sm border border-transparent;
+    @apply relative overflow-visible transition-all duration-300 bg-card/50 backdrop-blur-sm border border-transparent;
+  }
+  
+  .frosted-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px hsla(var(--accent), 0.1);
+    border-color: hsl(var(--accent) / 0.1);
   }
 
   .frosted-card::before,
   .frosted-card::after {
     content: '';
     position: absolute;
-    border-radius: inherit;
+    width: 12px;
+    height: 12px;
     opacity: 0;
-    transition: opacity 0.5s ease;
     pointer-events: none;
+    background: transparent;
+    border-style: solid;
+    border-color: hsl(var(--accent));
   }
 
-  /* Top-left frosted glow */
   .frosted-card::before {
     top: -2px;
     left: -2px;
-    width: 100px;
-    height: 100px;
-    background: radial-gradient(circle at top left, hsla(var(--accent), 0.3), transparent 60%);
-    filter: blur(20px);
+    border-width: 2px 0 0 2px;
+    border-top-left-radius: 0.5rem;
   }
 
-  /* Bottom-right neon edge */
   .frosted-card::after {
     bottom: -2px;
     right: -2px;
-    width: 150px;
-    height: 150px;
-    background: linear-gradient(to top left, hsla(var(--accent), 0.5), transparent 50%);
-  }
-
-  .frosted-card:hover {
-    border-color: hsl(var(--accent) / 0.2);
-    box-shadow: 0 0 30px hsla(var(--accent), 0.1);
+    border-width: 0 2px 2px 0;
+    border-bottom-right-radius: 0.5rem;
   }
 
   .frosted-card:hover::before,
   .frosted-card:hover::after {
-    opacity: 1;
+    animation: corner-pulse 0.7s ease-out forwards;
   }
 }
 
@@ -130,6 +130,25 @@
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+@keyframes corner-pulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    box-shadow: 0 0 0 0 hsla(var(--accent), 0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px 5px hsla(var(--accent), 0.4);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+    box-shadow: 0 0 0 0 hsla(var(--accent), 0);
+  }
+}
+
 
 @keyframes rotate {
   from { transform: rotate(0deg); }
