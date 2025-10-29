@@ -234,6 +234,10 @@ export const coreCompetencies: { name: string; icon: LucideIcon }[] = [
   { name: "Tailwind CSS", icon: Code },
   { name: "Docker", icon: Terminal },
   { name: "Git & GitHub", icon: GitBranch },
+  { name: "SQL", icon: Server },
+  { name: "HLD", icon: BrainCircuit },
+  { name: "LLD", icon: BrainCircuit },
+  { name: "DBMS", icon: Server },
 ];
 
 
