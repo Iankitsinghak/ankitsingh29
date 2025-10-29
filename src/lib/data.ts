@@ -212,7 +212,7 @@ export const skillsData = [
   { skill: "System Architect", level: 90 },
   { skill: "Backend", level: 80 },
   { skill: "DSA", level: 95 },
-  { skill: "AI Tools", level: 70 },
+  { skill: "AI Tools", level: 90 },
 ];
 
 export const coreCompetencies: { name: string; icon: LucideIcon }[] = [
