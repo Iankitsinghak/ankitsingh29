@@ -1,12 +1,11 @@
 "use client";
 
-import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AnimatedDiv } from "@/components/animated-div";
 import { Github } from "lucide-react";
 import { gfgStats, generateGithubContributions } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
-import { HolographicCard } from "../holographic-card";
 
 const GFGIcon = () => (
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 fill-current">
@@ -41,7 +40,7 @@ export default function Stats() {
         <div className="grid grid-cols-1 gap-8 mt-12 lg:grid-cols-3">
           {/* GitHub Stats */}
           <AnimatedDiv className="lg:col-span-2" delay={0.1}>
-            <HolographicCard>
+            <Card>
               <CardHeader>
                 <div className="flex items-center gap-2">
                   <Github className="w-6 h-6" />
@@ -69,12 +68,12 @@ export default function Stats() {
                     A snapshot of my commit history over the last year.
                 </p>
               </CardContent>
-            </HolographicCard>
+            </Card>
           </AnimatedDiv>
 
           {/* GFG Stats */}
           <AnimatedDiv delay={0.2}>
-            <HolographicCard>
+            <Card>
               <CardHeader>
                  <div className="flex items-center gap-2">
                   <GFGIcon />
@@ -97,7 +96,7 @@ export default function Stats() {
                     </div>
                 </div>
               </CardContent>
-            </HolographicCard>
+            </Card>
           </AnimatedDiv>
         </div>
       </div>
