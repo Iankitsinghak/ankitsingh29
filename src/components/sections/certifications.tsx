@@ -1,8 +1,8 @@
 import { certificationsData } from "@/lib/data";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { AnimatedDiv } from "@/components/animated-div";
-import { Badge } from "@/components/ui/badge";
 import { Award } from "lucide-react";
+import { HolographicCard } from "../holographic-card";
 
 export default function Certifications() {
   return (
@@ -19,7 +19,7 @@ export default function Certifications() {
       <div className="grid grid-cols-1 gap-8 mt-12 md:grid-cols-2 lg:grid-cols-3">
         {certificationsData.map((cert, index) => (
           <AnimatedDiv key={index} delay={index * 0.1}>
-            <Card className="flex flex-col h-full frosted-card">
+            <HolographicCard>
               <CardHeader>
                 <div className="flex items-start gap-4">
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-accent/10 text-accent">
@@ -40,7 +40,7 @@ export default function Certifications() {
                   </p>
                 )}
               </CardContent>
-            </Card>
+            </HolographicCard>
           </AnimatedDiv>
         ))}
       </div>

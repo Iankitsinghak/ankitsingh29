@@ -1,13 +1,11 @@
 import { experienceTimeline } from "@/lib/data";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AnimatedDiv } from "@/components/animated-div";
-import Link from "next/link";
-import { Button } from "../ui/button";
-import { ArrowRight } from "lucide-react";
+import { HolographicCard } from "../holographic-card";
 
 function TimelineCard(item: (typeof experienceTimeline)[0]) {
   return (
-    <Card className="frosted-card">
+    <HolographicCard>
       <CardHeader>
         <div className="flex items-center justify-between">
           <CardTitle className="text-xl font-headline">{item.title}</CardTitle>
@@ -18,7 +16,7 @@ function TimelineCard(item: (typeof experienceTimeline)[0]) {
       <CardContent>
         <p className="text-sm">{item.description}</p>
       </CardContent>
-    </Card>
+    </HolographicCard>
   );
 }
 

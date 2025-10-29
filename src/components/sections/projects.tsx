@@ -1,15 +1,15 @@
 "use client";
 
 import { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
-import { Github, ExternalLink, X, ArrowRight } from 'lucide-react';
+import { Github, ExternalLink, ArrowRight } from 'lucide-react';
 import { projectsData } from '@/lib/data';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogClose } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { AnimatedDiv } from '../animated-div';
+import { HolographicCard } from '../holographic-card';
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<(typeof projectsData)[0] | null>(null);
@@ -18,7 +18,7 @@ export default function Projects() {
   const otherProjects = projectsData.filter(p => !p.featured);
 
   const ProjectCard = ({ project }: { project: (typeof projectsData)[0] }) => (
-    <Card className="flex flex-col h-full frosted-card">
+    <HolographicCard>
       <CardHeader>
         <CardTitle className="font-headline">{project.title}</CardTitle>
         <p className="text-sm text-muted-foreground">{project.tagline}</p>
@@ -45,7 +45,7 @@ export default function Projects() {
           <Button onClick={() => setSelectedProject(project)}>View Details</Button>
         </DialogTrigger>
       </CardFooter>
-    </Card>
+    </HolographicCard>
   );
 
   return (
