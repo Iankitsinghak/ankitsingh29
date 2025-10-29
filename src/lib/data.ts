@@ -277,6 +277,20 @@ export const certificationsData = [
     skills: "SQL",
   },
   {
+    title: "ICDMAI Hackathon",
+    issuer: "Semi-Finalist",
+    date: "",
+    credentialId: null,
+    skills: "Team collaboration, Prototyping, and problem-solving.",
+  },
+  {
+    title: "Adobe India Hackathon",
+    issuer: "Participant",
+    date: "",
+    credentialId: null,
+    skills: "Creative problem-solving and rapid application development.",
+  },
+  {
     title: "Smart India Hackathon 2024",
     issuer: "University Rank #2",
     date: "",
@@ -315,3 +329,4 @@ export const socialLinks = {
   linkedin: "https://www.linkedin.com/in/ankit-singh-ak29/",
   resume: "https://drive.google.com/file/d/11GqMLnP-R7fQxBt_V1WtFIvVUzXDi2rz/view?usp=share_link",
 };
+
