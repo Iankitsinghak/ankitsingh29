@@ -327,6 +327,6 @@ export const gfgStats = {
 export const socialLinks = {
   github: "https://github.com/Iankitsinghak",
   linkedin: "https://www.linkedin.com/in/ankit-singh-ak29/",
-  resume: "https://drive.google.com/file/d/11GqMLnP-R7fQxBt_V1WtFIvVUzXDi2rz/view?usp=share_link",
+  resume: "https://drive.google.com/file/d/11b4g5UzXh13BBgLNsY8r7Kobet4AvXSA/view?usp=drive_link",
 };
 
